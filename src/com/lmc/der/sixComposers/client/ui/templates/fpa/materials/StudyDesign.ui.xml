@@ -1,0 +1,83 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<g:HTMLPanel width="82ex">
+		<table>
+		<col style="width:12ex"/><col style="width:35ex"/><col style="width:35ex"/>
+		<tr>
+			<td>In-Life Dates:</td>
+			<td colspan ="2" style="text-align:center">
+				Start:&nbsp;<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='15'/>&nbsp;&nbsp;
+				&nbsp;End:&nbsp;<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='15'/>&nbsp;
+				Month/Day/Year</td>
+		</tr>
+		<tr>
+			<td>Mating:</td>
+			<td colspan = "2"><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+				<p>Sexually mature males and nulliparous female rats of the same strain were mated (1:1) in house,
+				and mating was confirmed by presence of a copulatory plug and/or examination of sperm in a daily vaginal smear.
+				The day on which positive evidence of mating was observed was designated as gestation day (GD) 0.
+				Litters with more than 8 pups were standardized by culling on PND 4 to 8 pups per litter.
+				</p>
+				<p style="color:firebrick;font-style:italic">OR</p>
+				<p>Time mated pregnant dams were received from the supplier on GD 
+				<span style="color:firebrick">[7, 8, 9, or 10
+					<span style="font-style:italic">(must be on same day for each study)</span>]</span>.
+				Litters with more than 8 pups were standardized by culling on PND 4 to 8 pups per litter.
+				</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				Describe procedure for obtaining juvenile animals (e.g., bred in-house,
+				including determination of confirmation of pregnancy, OR received pregnant
+				time-mated dams from supplier on GD 7, 8, 9, or 10) and standardizing litter
+				size to 8 - 10 pups by culling on PND 3 - 5.  Example text is included in the field.
+				Cross fostering is unacceptable.
+			</td>
+		</tr>
+		<tr>
+			<td>Animal Assignment:
+			</td>
+			<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" >
+					<p>					
+					Animals were assigned
+					<span style="color:firebrick;font-style:italic">(note how assigned, e.g., randomized complete block design
+					(time-separated necropsy is the blocking factor))</span>
+					to the test groups noted in Table 1.  Littermates 
+					<span style="color:firebrick">[were / were not]</span> assigned to the same treatment group.					
+					</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+			<td>The treatment groups include:
+				(1) the vehicle-treated and (2) xenobiotic-treated with at least two dose levels.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				
+						<div style="font-weight:bold">TABLE 1. Study Design *</div>
+						<tbl_mpa:MPATable1/>
+			</td>
+			<td style="vertical-align:top">* Data were obtained<br/>from page
+						 	<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength="4"/><br/> 
+						 	of the study report.<br/>
+						 	Medium Dose Level will be<br/>
+						 	included in all tables of<br/>
+						 	the docx file only if it<br/>
+						 	is not leaved blank here.  
+			</td>
+		</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

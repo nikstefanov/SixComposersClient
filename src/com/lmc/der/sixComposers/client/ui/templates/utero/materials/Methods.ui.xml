@@ -1,0 +1,106 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_hersh="urn:import:com.lmc.der.sixComposers.client.widgets.tables.hersh"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel width="100ex">
+	    <table>
+	        <col/><col/><col/>
+	        <tr>
+	            <td>Clinical Examinations</td>
+	            <td>
+	                <w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>ClinicalExaminations>>Html">
+	                    <p>Cage-side checks for mortality, moribundity, and clinical signs of toxicity were
+	                        conducted twice daily.  Detailed physical examinations were performed prior to
+	                        initiation of dosing and at termination.</p>
+	                </w:DERRichTextAreaPUT>
+	            </td>
+	            <td>
+	                Describe the frequency and scope of clinical observations (i.e., cage-side check,
+	                hand-held physical examination, and/or standard arena assessment).
+	                Clinical observations should have been conducted at least once daily for mortality and signs of toxicity.
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>Body Weight</td>
+	            <td>
+	                <w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>BodyWeight>>Html">
+	                    <p>Animals were weighed at randomization, study initiation, daily throughout the dosing period and at termination.</p>
+	                </w:DERRichTextAreaPUT>
+	            </td>
+	            <td>Describe the frequency of body weights measurement.
+	                Beginning just prior to initiation of treatment, animals should have been individually weighed
+	                each day to determine both dose volume and effects of treatment on the animals.
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>Food Consumption</td>
+	            <td>
+	                <w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>FoodConsumption>>Html">
+	                    <p>Food consumption was measured for each cage by subtracting the amount of food remaining
+	                        in the cage from the amount supplied, accounting for spillage.
+	                        Values were reported as group mean daily food consumption (g/animal/day).</p>
+	                </w:DERRichTextAreaPUT>
+	            </td>
+	            <td>
+	                Food consumption measurements (on a cage basis) are optional.
+	                If conducted, food consumption should be expressed as g/animal/day.
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>Necropsy and Measurement of Uterine Weight</td>
+	            <td>
+	                <w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>Necroposy>>Html">
+	                    <p>On PND <span style="color:firebrick">[#]</span> (approximately 24 hours after final administration of
+	                    the test substance), all surviving animals were euthanized
+	                    <span style="color:firebrick">(describe method)</span>, exsanguinated, and subjected to a gross necropsy.
+	                    Dissection of the uterus was performed according to the U.S. EPA Guideline.
+	                    Briefly, the vagina was removed just below the cervix
+	                    in order to retain the luminal fluid in the uterus.
+	                    The &quot;wet&quot; uterus (i.e., containing the luminal fluid) was weighed.
+	                    Subsequently, the uterine horns were cut longitudinally and gently blotted
+	                    with moist filter paper to remove the luminal fluid while preventing desiccation and
+	                    the blotted uterus was weighed.</p>
+	                </w:DERRichTextAreaPUT>
+	            </td>
+	            <td>
+	                Briefly, describe the procedures at study termination, including euthanasia,
+	                necropsy, measurement of wet and blotted uterus weights,
+	                and any optional histopathology.  Individual data for uterine weights
+	                should have been reported to the nearest 0.1 mg.
+	                Unless there are deviations from the standard operating procedures,	
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td colspan='3'>
+	        		it is generally unnecessary to provide more than a brief summary
+	                of the methods for dissection and weighing of the uterus.
+	                Note any deviations from the Test Guideline, especially any procedures that may
+	                add to variability in uterus weight. (e.g., loss of fluids, desiccation, etc.).
+	        	</td>
+	        </tr>
+	        <tr>
+	            <td> Microscopic Examination</td>
+	            <td>
+	                 <w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>MicroscopicExam>>Html">
+	                     
+	                 </w:DERRichTextAreaPUT>
+	            </td>
+	            <td>
+	                (If performed). Following fixation in10% buffered formalin and HE-staining,
+	                the vagina may be examined histologically for keratinization and
+	                cornification (Jones and Edgren, 1973).
+	                In addition, morphometric measurement of endometrial epithelium may be done
+	                for quantitative comparison.	                
+	            </td>
+	        </tr>	        
+	    </table>
+	
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,444 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	>
+	<ui:style>		
+	</ui:style>
+	<g:HTMLPanel width="165ex">
+		<table class="double_bordered" id="table2">
+			 <caption>
+			 	<b>Table 2: General Information About the Test Species and Acclimation.</b>
+			 </caption>			
+			 <col class="rightBorder" style="width:28ex"/>
+			 <col class="rightBorder" />
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+			 <tr class="visible_row">
+			 	<td>
+			 		Species common name:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesCommonName>>Values>>Html" ui:field='t2v1'/>			 		
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesCommonName>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr1'/>			 		
+			 	</td>
+			 	<td rowspan="3" style="font-style:italic;">
+			 		EPA recommends fathead minnow (Pimephales promelas).			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Species scientific name:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesScientificName>>Values>>Html" ui:field='t2v2'/>	
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesScientificName>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr2'/>
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Species strain (if stated):
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesStrain>>Values>>Html" ui:field='t2v3'/>	
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesStrain>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr3'/>
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Were fish obtained from a single laboratory stock?
+			 	</td>
+			 	<td>
+			 		<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>ObtainedStock>>Values>>Html"/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>ObtainedStock>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr4'>
+			 			<p style="color:FireBrick">
+			 				[Provide additional information about the source of animals, if available.]
+			 			</p>
+			 		</w:DERRichTextAreaPUT>
+			 	</td>
+			 	<td style="font-style:italic;">			 		
+			 			EPA recommends that fish be from a single laboratory stock.			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Were acclimation conditions same as definitive test?
+			 	</td>
+			 	<td>
+			 		<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>DefinitiveTest>>Values>>Html"/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>DefinitiveTest>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr5'/>
+			 	</td>
+			 	<td style="font-style:italic;">
+			 		EPA recommends that fish be acclimated under water quality and illumination conditions that are similar to the definitive test.
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Acclimation period:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>AcclimationPeriod>>Values>>Html" visibleLength='8' ui:field='t2v6'/>&nbsp;
+			 		days
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>AcclimationPeriod>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr6'/>
+			 	</td>
+			 	<td style="font-style:italic;">
+			 		EPA recommends a minimum two-week acclimation period.  Note that the acclimation period is different from the subsequent, in situ pre-exposure phase.
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Details on health:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>DetailsOnHealth>>Values>>Html" ui:field='t2v7'/>
+			 	</td>
+			 	<td><!-- 
+			 		<w:DERRichTextAreaPUT name="" addStyleNames='smallRTA' ui:field='t2dr7'/>
+			 		<div>
+			 			Describe the health of the stock: Were any behavioral abnormalities, deformities, other clinical signs, or mortality observed?
+			 		</div> -->
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>DetailsOnHealth>>Details>>Html" width='40ex' height='25ex' ui:field='t2dr7'>
+			 			<p style="color:FireBrick">
+			 				[Describe the health of the stock: Were any behavioral abnormalities, deformities, other clinical signs, or mortality observed?]
+			 			</p>
+			 		</w:DERRichTextAreaPUT>
+			 	</td>
+			 	<td style="font-style:italic;">
+			 		EPA recommends that mortality during the 7 days prior to the pre-exposure phase be less than 5% of the culture population.  If mortality during these 7 days is greater than 10%, EPA recommends that the fish be rejected.  If mortality is between 5-10%, EPA recommends that fish be held another 7 days.  If mortalities greater than 5% occur during this extended acclimation period, EPA recommends that the fish not be used.
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Type of food:
+			 	</td>
+			 	<td>
+			 		<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>TypeOfFood>>Values>>Html" suggboxName='FOOD_TYPE'/><br/>
+			 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 		</span>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>TypeOfFood>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr8'/>			 		
+			 	</td>
+			 	<td rowspan="4" style="font-style:italic;">
+			 		EPA recommends that fish be fed frozen brine shrimp twice per day to promote active reproduction and maintain body condition.
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Source of food:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SourceOfFood>>Values>>Html" ui:field='t2v9'/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>SourceOfFood>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr9'/>			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Frequency of feeding:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>FrequencyOfFeeding>>Values>>Html" visibleLength='8' ui:field='t2v10'/>
+			 		&nbsp;times/day
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>FrequencyOfFeeding>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr10'/>			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Details of feeding:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>DetailsOfFeeding>>Values>>Html" ui:field='t2v11'/>			 		
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table2>>DetailsOfFeeding>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr11'>
+			 			<p style="color:FireBrick">
+			 				[Describe any other relevant information about the feeding regime, including the amount given.  Provide additional information if feeding conditions differed between the acclimation, pre-exposure, and definitive test periods.]
+			 			</p>
+			 		</w:DERRichTextAreaPUT>
+			 	</td>
+			 </tr>
+			 </tbody>
+		</table>
+		
+		<br/>
+		<table class="double_bordered" id="tabel3">
+			 <caption>
+			 	<b>Table 3: Fish Selection and Pre-Exposure Performance.</b>
+			 </caption>			
+			 <col class="rightBorder" style="width:28ex"/>
+			 <col class="rightBorder" />
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+				 <tr class="visible_row">
+				 	<td>
+				 		Age at test initiation:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>AgeAtTestInitiation>>Values>>Html" visibleLength='8' ui:field='t3v1'/>&nbsp;months
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>AgeAtTestInitiation>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr1'/>
+				 	</td>
+					<td style="font-style:italic;">
+						EPA recommends reproductively mature (sexually dimorphic) fish, 4.5 - 6 months old.
+					</td>
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Mean weight of males at test initiation (if determined):
+				 	</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanWeightMales>>Values>>Html" visibleLength='8' ui:field='t3v2'/>&nbsp;g	 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanWeightMales>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr2'>
+				 			<p style="color:FireBrick">
+				 			[Indicate whether the mean is based on a subsample of male fish or based on all male fish selected for the test.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>			 		
+				 	</td>
+				 	<td rowspan="4" style="font-style:italic">
+				 		EPA recommends that a subsample of fish be weighed before the test to estimate the mean weight for each sex.  It is recommended that the individual weight of each fish selected for the test be within ??20% of the estimated mean for each sex.				 		
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Range of individual weights (males) at test initiation (if determined):
+				 	</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>RangeOfIndividualWeightsMales>>Values>>Html" visibleLength='8' ui:field='t3v3'>
+				 			from - to
+				 		</w:DERTextBoxLength>&nbsp;g		 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>RangeOfIndividualWeightsMales>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr3'/>
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Mean weight of females at test initiation (if determined):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanWeightFemales>>Values>>Html" visibleLength='8' ui:field='t3v4'/>&nbsp;g
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanWeightFemales>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr4'>
+				 			<p style="color:FireBrick">
+				 			[Indicate whether the mean is based on a subsample of female fish or based on all female fish selected for the test.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>				
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Range of individual weights (females) at test initiation (if determined):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>RangeOfIndividualWeightsFemales>>Values>>Html" visibleLength='8' ui:field='t3v5'>
+				 			from - to
+				 		</w:DERTextBoxLength>&nbsp;g		 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>RangeOfIndividualWeightsFemales>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr5'/>
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Mean length of males at test initiation (if determined):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanLengthMales>>Values>>Html" visibleLength='8' ui:field='t3v6'/>&nbsp;
+				 		mm
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanLengthMales>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr6'/>
+				 	</td>
+				 	<td></td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Mean length of females at test initiation (if determined):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanLengthFemales>>Values>>Html" visibleLength='8' ui:field='t3v7'/>&nbsp;
+				 		mm
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanLengthFemales>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr7'/>
+				 	</td>
+				 	<td></td>
+				 </tr>
+				  <tr class="visible_row">
+				 	<td>
+				 		Duration of pre-exposure phase:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>DurationOfPreexposure>>Values>>Html" visibleLength='8' ui:field='t3v8'/> &nbsp;days
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>DurationOfPreexposure>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr8'/>
+				 	</td>
+				 	<td style="font-style:italic">
+				 		EPA recommends a minimum of 14 days.
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Were pre-exposure conditions identical to the definitive test?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>PreexposureConditions>>Values>>Html" ui:field='t3v9'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>PreexposureConditions>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr9'/>				 			
+				 	</td>
+				 	<td style="font-style:italic">
+				 		EPA recommends that pre-exposure conditions, including temperature, photoperiod, feeding, etc., be identical to definitive test conditions.
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Number of pre-exposure tanks:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfPreexposureTanks>>Values>>Html" ui:field='t3v10'/>				 		
+				 	</td>
+				 	<td><!-- 
+				 		<w:DERRichTextAreaPUT name="" addStyleNames='smallRTA' ui:field='t3dr10'/>
+				 		<br/>Were extra replicates established?-->
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfPreexposureTanks>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr10'>
+				 			<p style="color:FireBrick">
+				 				[Were extra replicates established?]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends that additional tanks set up at the beginning of pre-exposure will ensure that sufficient replicates with the correct sex ratio are available for the definitive test.
+					</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Number of males per tank:
+				 	</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MalesPerTank>>Values>>Html" ui:field='t3v11'/>				 				
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>MalesPerTank>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr11'/>				 					 		
+				 	</td>
+				 	<td style="font-style:italic">
+					</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Number of females per tank:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>FemalesPerTank>>Values>>Html" ui:field='t3v12'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>FemalesPerTank>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr12'/>
+				 	</td>
+				 	<td/>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Pre-exposure fecundity:
+					</td>
+				 	<td>&ge;
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>PreexposureFecundity>>Values>>Html" visibleLength='8' ui:field='t3v13'/><br/>
+				 		eggs/female/reproductive<br/>day/replicate				 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>PreexposureFecundity>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr13'/>
+				 	</td>
+				 	<td style="font-style:italic">
+				 		EPA recommends that pre-exposure fecundity in each replicate (tank) selected for use in the definitive test be at least 15 eggs/female/reproductive day/replicate during the 7 days prior to the definitive test.
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Number of spawns during pre-exposure:
+					</td>
+				 	<td>&ge;
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfPreexposureSpawns>>Values>>Html" visibleLength='8' ui:field='t3v14'/><br/>
+				 		times in 7 days
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfPreexposureSpawns>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr14'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends that spawning occur at least twice in the 7 days prior to the definitive test.
+					</td>					
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Details on pre-exposure:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>DetailsOnPreexposure>>Values>>Html" ui:field='t3v15'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestOrganism>>Table3>>DetailsOnPreexposure>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr15'>
+				 			<p style="color:FireBrick">
+				 			[Were any pre-exposure replicates excluded due to mortality, incorrect sex ratio, or poor reproductive performance?]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td style="font-style:italic"/>
+				 </tr>
+			 </tbody>
+			</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

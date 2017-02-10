@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>		
+		<div style="font-weight:bold">
+			Table 17: Gonadal Histopathology in Female [test organism].
+		</div>
+		<tblfs:FSTRATable17/>
+		<div>
+			Abbreviations:
+			<sup>1</sup> Gonadal histopathology diagnostic observations are graded 0 - 4 based on severity: 0= Not remarkable, 1= Minimal, 2= Mild, 3= Moderate, 4= Severe.
+			See Appendix E of the test guideline for reference.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>FemaleHistopatology>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

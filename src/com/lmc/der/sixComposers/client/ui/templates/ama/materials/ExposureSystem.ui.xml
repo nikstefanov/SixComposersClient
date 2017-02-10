@@ -1,0 +1,268 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>		
+	</ui:style>
+	<g:HTMLPanel width="162ex">
+		<table class="double_bordered" id="table4">
+			 <caption>
+			 	<b>Table 4: Summary of Information on the Exposure System and Test Vessel Characteristics.</b>
+			 </caption>			
+			 <col class="rightBorder" style="width:30ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:50ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+			 	<tr class="visible_row">
+			 		<td>					
+						Type of exposure:
+					</td>
+					<td>
+				 		<w:DERAutoSuggestBox name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfExposure>>Values>>Html" suggboxName='EXPOSURE'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfExposure>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr1'/><br/>
+				 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends the use of a flow-through system.
+					</td>						
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Type of flow-through dilution system (if applicable):
+					</td>
+					<td>				 		
+						<w:DERAutoSuggestBox name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfFlowThroughDilutionSystem>>Values>>Html" suggboxName='DILUTION_SYSTEM'/><br/>
+				 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfFlowThroughDilutionSystem>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr2'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						Intermittent flow proportional diluters or continuous flow serial diluters are recommended.<sup>2</sup>
+					</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Flow-through rate (if applicable):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>FlowThroughRate>>Values>>Html" ui:field='t4v3'/>&nbsp;
+				 		mL/min
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>FlowThroughRate>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr3'/>
+				 	</td>
+					<td style="font-style:italic;">
+						Recommended flow-through rate is 25 mL/min (complete volume replacement ca. every 2.7 hrs)
+					</td>
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Details on toxicant mixing for flow-through systems (if applicable):
+					</td>
+					<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>ToxicantMixing>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v4'/>				 			
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>ToxicantMixing>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr4'>
+				 			<p style="color:FireBrick">
+				 				[Briefly summarize any relevant information about toxicant mixing, flow-splitting accuracy, and the performance of the flow-through system.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td style="font-style:italic;">
+						Recommended toxicant mixing for flow-through systems: 1) Mixing chamber is recommended but not required; 2) Aeration is not recommended for mixing;3) A demonstration that the test solution is completely mixed before introduced into the test system is recommended; 4) The recommended flow splitting accuracy is within 10%.
+					</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Renewal period for static renewal (if applicable):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>RenewalPeriodForStaticRenewal>>Values>>Html" ui:field='t4v5'/>&nbsp;
+				 		hrs
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>RenewalPeriodForStaticRenewal>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr5'/>
+				 	</td>
+					<td style="font-style:italic;">
+						If static renewal is used, EPA recommends 24-hr renewal; renewal period is recommended not to exceed 72 hours
+					</td>
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Aeration?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>Aeration>>Values>>Html" ui:field='t4v6'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>Aeration>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr6'/>
+				 	</td>
+					<td style="font-style:italic;">
+						EPA recommends maintaining dissolved oxygen concentrations &ge;40% air
+						saturation (&ge;3.5 mg/L). Aeration may be maintained through bubblers. It is recommended to set bubblers at levels that do not cause stress on the tadpoles.
+					</td>
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Source of dilution water:
+					</td>
+					<td>
+						<w:DERAutoSuggestBox name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>SourceOfDilutionWater>>Values>>Html" suggboxName='SOURCE'/><br/>				 		
+				 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>SourceOfDilutionWater>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr7'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends natural or reconstituted water; it is recommended that natural water be sterilized with UV and tested for pesticides, heavy metals, and other possible contaminants, including known substrates of the iodine transporter of the thyroid gland (e.g., fluoride, chlorate, perchlorate). OECD accepts any water in which the test species show control survival at least as good as indicated in the test guideline.
+					</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Was dilution water analyzed for pesticides, heavy metals, and other contaminants?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>WasDilutionWaterAnalyzed>>Values>>Html" ui:field='t4v8'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>WasDilutionWaterAnalyzed>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr8'/>
+				 	</td>
+					<td>
+					</td>
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Iodide supplementation in water?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>IodideSupplementationInWater>>Values>>Html" ui:field='t4v9'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>IodideSupplementationInWater>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr9'/>
+				 	</td>
+					<td style="font-style:italic;">
+						If reconstituted water is used or if background levels of iodide in natural water are less than 0.5 ??g/L, iodide supplementation is recommended. This supplementation is in addition to the recommended dietary source of iodide (e.g.. in Sera Micron).
+					</td>	
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Test vessel type/materials:
+					</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselType>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v10'/>				 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselType>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr10'/>
+				 	</td>
+					<td style="font-style:italic;">
+						EPA and OECD recommend that water-contact portions of the system not compromise the study (e.g., all glass vessels or glass vessels with stainless steel frames are acceptable examples).
+					</td>
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Test vessel size:
+					</td>
+					<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselSize>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v11'>
+				 			<p style="color:FireBrick">
+				 				[report dimensions and/or total volume, specify units]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>	
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselSize>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr11'/>
+				 	</td>
+				 	<td>
+				 	</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Fill volume:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>FillVolume>>Values>>Html" ui:field='t4v12'/>&nbsp;
+				 		L
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>FillVolume>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr12'/>
+				 	</td>
+				 	<td>
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+			 		<td>					
+						Additional details on exposure system:
+					</td>
+					<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>AdditionalDetailsT4>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v13'/>
+				 				
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table4>>AdditionalDetailsT4>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr13'>
+				 			<p style="color:FireBrick">
+				 				[Briefly summarize other relevant details regarding the test system as they relate to guideline recommendations.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td>
+				 	</td>						
+				</tr>
+			</tbody>
+		</table>
+		Abbreviations:
+		<sup>2</sup> Additional guidance for aquatic test design is located in OCSPP Guideline 850.1000, Special Considerations for Conducting Aquatic Laboratory Studies.
+		
+		<br/><br/>
+		<b>Table 5: Summary of Water Quality Characteristics in the Test System.</b>		
+		<tbl_ama:AMA2Table5/>
+		<div>
+			General recommendations for frequency of measurements: EPA recommends that water quality parameters be measured in a control and at one test item concentration at least weekly.
+			In static renewal systems, water quality parameters, including ammonia, should be measured just prior to renewal. In addition, EPA recommends that DO be measured at each concentration at least weekly and that temperature be measured continuously.
+			OECD recommends that DO and temperature be measured at least weekly and that pH and hardness be measured at least at the beginning and end of the test.
+		</div>
+		<div>
+			<span><g:Button btnName='TBL5_ADD'>Add parameter</g:Button></span>
+			<span><g:Button btnName='TBL5_REM'>Remove parameter</g:Button></span>
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>ExposureSystem>>Table5Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

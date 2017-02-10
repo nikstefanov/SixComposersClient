@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<g:HTMLPanel>
+		<table>
+		<col style="width:15ex"/><col /><col style="width:40ex"/>
+			<tr>
+				<td>Mortality</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}">
+					<p>All animals survived until scheduled termination.</p>
+					<p style="color:firebrick;font-style:italic">OR</p>
+					<p>One animal in the low-dose group (Animal No. <span style="color:firebrick">[#]</span>) was found dead on PND 25.
+					Gross examination of this animal at necropsy revealed a punctured lung, implicating gavage error.
+					All other rats survived until scheduled sacrifice.</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+				<td>Report any mortality and assess whether any animal deaths were due to treatment
+				with the test substance or other circumstances (e.g., gavage errors).</td>
+			</tr>
+			<tr>
+				<td>Clinical Signs of Toxicity</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}">
+					<p>No clinical signs of toxicity were observed in animals for any dose group.</p>					
+					</w:DERRichTextAreaPUT>
+				</td>
+				<td>Report any clinical signs of toxicity, including information on the nature,
+				incidence, severity, onset, and duration.  As with the mortality data,
+				the Reviewer should assess whether the findings are considered adverse
+				and related to treatment and if they had an impact on dose selection.<br/>
+				If clinical signs of toxicity are not observed leave the sample text.</td>
+			</tr><!-- 
+			<tr>
+				<td colspan="3">
+					<div style="font-weight:bold">TABLE 2. Incidence of Clinical Observations *</div>
+					<tbl_mpa:MPATable2/>
+				</td>
+			</tr>  -->
+		</table>
+		<div style="font-weight:bold">TABLE 2. Incidence of Clinical Observations *</div>
+		<tbl_mpa:MPATable8 tblName='TBL2'/>
+		<g:Button btnName='OBS_ADD'/>
+		<g:Button btnName='OBS_REM'/>
+		&nbsp;* Data were extracted from page <w:DERTextBoxLength name="{GDStr.getPath}" visibleLength="4"/> &nbsp;of the study report.
+	</g:HTMLPanel>
+</ui:UiBinder> 

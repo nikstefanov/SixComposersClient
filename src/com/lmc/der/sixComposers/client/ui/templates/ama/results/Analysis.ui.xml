@@ -1,0 +1,147 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<table>
+			<col style="width:30ex;" />
+			<col style="width:70ex;" />
+			<tr>
+				<td>
+					B. Study Author's Analysis and Conclusions
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Analysis>>StudyAuthorAC>>Html" addStyleNames='bigRTA' ui:field='rtaSAAC'>
+						<p style="color:FireBrick">
+							[List the parameters that were analyzed and the statistical tests that were performed by the study author.
+							Indicate whether the statistical analyses were appropriate and whether they were consistent with the methods recommended in the guideline.]
+						</p>
+						<p style="color:FireBrick">
+							[Briefly summarize the study author's conclusions.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					C. Reviewer's Analysis and Conclusions
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Analysis>>ReviewerAC>>Html" addStyleNames='bigRTA' ui:field='rtaRAC'>
+						<p style="color:FireBrick">
+							[It is recommended that the reviewer confirm the accuracy of the statistical analyses by recalculating both summary statistics and pertinent statistical tests for each endpoint, 
+							as well as performing the tests including and excluding any outliers, as appropriate.
+							Include percent differences from the negative control for each endpoint and the criteria for determining significance.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr> 
+			<tr>
+				<td>
+					Statistical Methods
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Analysis>>StatisticalMethods>>Html" addStyleNames='bigRTA' ui:field='rtaSM'>
+						<p>
+							<font color="FireBrick">
+								[Modify as appropriate.]
+							</font>
+							The reviewer analyzed data for mortality using Fisher's Exact Test
+							<font color="FireBrick">
+								[ToxStat 3.5 or CETIS v.xx]
+							</font>
+							. Replicate median values for developmental stage were analyzed using the Jonckheere-Terpstra test
+							<font color="FireBrick">
+								[SAS v.xx or CETIS v.xx]
+							</font>
+							. Data for snout-vent-length (SVL), normalized hind-limb-length (HLL:SVL), and weight (respectively), ...
+						</p>
+						<p>
+							<font color="FireBrick">
+								[Choose the appropriate option below]
+							</font>
+							<ul>
+								<li>
+									<font color="FireBrick">
+										were
+									</font>
+									consistent with a monotonic concentration-response and therefore were analyzed using the Jonckheere-Terpstra test
+									<font color="FireBrick">
+										[SAS v.xx or CETIS v.xx]
+									</font>
+									.
+								</li>
+								<li>
+									<font color="FireBrick">
+										were not
+									</font>
+										consistent with a monotonic concentration-response. The data were tested for normality using Shapiro-Wilks test and for homogeneity of variance using Levene's test
+									<font color="FireBrick">
+										[ToxStat 3.5 or CETIS]
+									</font>	
+										. Data							
+									<font color="FireBrick">
+										[specify]
+									</font>
+										that met the assumptions of normality and homogeneity of variance were then analyzed using Dunnett's test
+									<font color="FireBrick">
+										[ToxStat 3.5 or CETIS]
+									</font>
+										. Data	
+									<font color="FireBrick">
+										[specify]
+									</font>
+										that failed either of these assumptions
+									<font color="FireBrick">
+										[specify]
+									</font>
+										were analyzed using the Mann-Whitney test with the Bonferroni-Holm adjustment
+									<font color="FireBrick">
+										[ToxStat 3.5 or CETIS]
+									</font>
+									.									
+								</li>
+							</ul>
+						</p>
+						<p>
+							... The incidence of asynchronous development
+							<font color="FireBrick">
+								[if observed]
+							</font>
+							was analyzed using
+							<font color="FireBrick">
+								[specify test]
+							</font>
+							. Unless otherwise indicated, effects were considered statistically significant at
+							<font color="FireBrick">
+								[p&lt;0.05]
+							</font>
+							.
+							<font color="FireBrick">
+								[Describe any summary statistics presented for thyroid gross pathology and histopathology.]
+							</font>
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Conclusions
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Analysis>>Conclusions>>Html" addStyleNames='bigRTA' ui:field='rtaCon'>
+						<p style="color:FireBrick">
+							[Briefly summarize the study findings and complete the following tables(16 and 17).]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

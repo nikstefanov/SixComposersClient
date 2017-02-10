@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<table>
+		<col style="width:15ex"/><col /><col style="width:43ex"/>
+			<tr>
+				<td>Investigator's conclusions</td>
+				<td><w:DERRichTextAreaPUT name="HA||DiscussionAndConcl>>InvestigatorsConcl>>Html"/></td>
+				<td>Concisely summarize the investigator???s conclusions regarding the androgenic or anti-androgenic
+				    effects of the test substance on male accessory sex organ weights and any optional measurements.
+				</td>
+			</tr>
+			<tr>
+				<td>Agency Comments</td>
+				<td><w:DERRichTextAreaPUT name="HA||DiscussionAndConcl>>AgencyComments>>Html" height="45ex"/></td>
+				<td>
+					Summarize the results from the Hershberger assay, emphasizing androgenic or anti-androgenic effects on
+					the five mandatory accessory sex organ weights.
+					Discuss any relevant findings in optional parameters such as other organ weights,
+					serum hormone analyses, or corroborating histopathology in the context of increased organ weights.
+					If any systemic toxicity was observed (e.g., mortality, clinical signs of toxicity, or
+					decreased body weights or food consumption), integrate these effects into the interpretation of
+					the assay (e.g., determine if the dosing was so high that it precludes meaningful interpretation of
+					the organ weight data).  Note any discrepancies with the investigator???s conclusions
+					(e.g., rationale for acceptability or necessity for repeating assay).
+					Include discussion of adequacy of dose selection.
+				</td>
+			</tr>
+			<tr>
+				<td>Study Deficiencies</td>
+				<td><w:DERRichTextAreaPUT name="HA||DiscussionAndConcl>>StudyDeficiencies>>Html"/></td>
+				<td>List each deficiency (distinguishing between major and minor ones)
+				    and indicate what data are required to resolve the deficiency.
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

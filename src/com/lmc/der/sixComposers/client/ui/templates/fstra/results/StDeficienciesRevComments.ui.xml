@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td style="font-weight:bold">
+					Study<br/>Deficiencies
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>StudyDeficiencies>>Html" addStyleNames='bigRTA' ui:field='StDef'>
+						<p style="color:FireBrick">
+							[Were validity and performance criteria met?
+							Include a discussion of whether, to what extent,
+							and in what way failure to meet the performance criteria had
+							an impact on the quality or acceptability of the study e.g., major vs. minor deficiencies.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>				
+			</tr>
+			<tr>
+				<td>
+					<br/>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold">
+					Reviewer's<br/>Comments
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>ReviewerComments>>Html" addStyleNames='bigRTA' ui:field='RCom'>
+						<p style="color:FireBrick">
+							[Identify whether the reviewer???s interpretation is in agreement with that of the study author;
+							discuss any differences and whether or not the differences substantively impact the analysis.
+							Provide additional comments that do not appear under other sections of the template.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>				
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

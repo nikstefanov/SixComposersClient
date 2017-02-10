@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>		
+	</ui:style>	
+	<g:HTMLPanel width='140ex'>		
+		<div style="font-weight:bold">
+			Table 24: Growth Endpoints<sup>1,2</sup> in the Fish Short-Term Reproduction Assay (FSTRA) with [test chemical].
+		</div>
+		<tblfs:FSTRATable24/>
+		<div>
+			Abbreviations:  Diff. Difference.  NA Not applicable.  ND Not determined.<br/>
+				<sup>1</sup> Unless otherwise indicated, percent (%) differences are reported based on comparison to the negative (clean water) control.
+					<br/>
+					<sup>2</sup> Unless otherwise specified, effects are considered statistically significant at <span style="color:firebrick">[p&lt;0.05]</span>.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>GrowthEndpoints>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

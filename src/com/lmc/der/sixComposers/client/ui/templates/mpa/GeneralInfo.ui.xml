@@ -1,0 +1,142 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:with field='txtres' type='com.lmc.der.sixComposers.client.ui.PA_UI.TxtResources'/>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="104ex">
+		<!-- <w:DERTextBoxLength name="{GDStr.getPath}" visibleLength="25" maxLength='3'/> -->
+		<div style="font-weight:bold;">Table Reviewers</div>
+		<tbl:AMA2TableReviewers/>
+		<g:Button btnName='REV_ADD'/>
+		<g:Button btnName='REV_REM'/>
+		<div style="text-align:center;margin:3ex">
+			<span style="font-weight:bold;border:1px solid black;padding:1.5ex 2ex;">
+				DATA EVALUATION RECORD
+			</span>
+		</div>
+		<table>
+			<tr>
+				<td>STUDY TYPE:&nbsp;</td>
+				<td><g:InlineLabel lName='ONE'/></td>
+				<td>Year of Study:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td>PC Code:&nbsp;</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>DP Barcode:&nbsp;</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td>TXR#:&nbsp;</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>CAS No:&nbsp;</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td>TEST MATERIAL:&nbsp;</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}" visibleLength="30"/></td>
+				<td colspan="2">Use name of material tested as referred to in the study<br/>
+						(common agency chemical name in parenthesis).
+				</td>				
+			</tr>
+			<tr>
+				<td>Purity:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/>&nbsp;%</td>
+			</tr>
+			<tr>
+				<td>Synonyms:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td colspan="2">Other names and codes.</td>
+			</tr><!-- 
+			<tr>
+				<td>MRIDs:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td colspan="2">Comma separated,no hyphen.</td>
+			</tr>
+			<tr>
+				<td>Citations:</td>
+				<td colspan="3"><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+						<p>Author 
+							<span style="color:firebrick;font-style:italic;">
+								(up to 3, see SOP for exact format)
+							</span>. (<span style="color:firebrick;">[Study Year]</span>).
+							Title. Laboratory name and location.  Laboratory report number, study completion date. Unpublished.
+							<span style="color:firebrick;font-style:italic;">
+								(OR if published, list Journal name, vol.:pages)
+							</span>
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr> -->
+			<tr>
+				<td colspan="4">
+					<div style="font-weight:bold">
+						Table Citations
+					</div>			
+					<tbl:AMA2TableCitations/>
+					<div>Indicate: Author(s),Year, Study Title, Laboratory Name and Location, Laboratory Report Number,<br/>Sponsor, Full Study Date. If published, list the name of the journal, vol., pages, year.
+					</div>			
+					<div><span>
+						<g:Button btnName='CIT_ADD'>
+							Add Citation
+						</g:Button>
+						</span>
+						<span>
+						<g:Button btnName='CIT_REM'>
+							Remove Citation
+						</g:Button>
+						</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Sponsor:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td colspan="2">Name of Study Sponsor.</td>
+			</tr>
+			<tr>
+				<td>Test Order #:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td colspan="2">Test Order Recipient or the Consortium No.<br/>(e.g., EDSP-PC Code-###)</td>
+			</tr>
+			<tr>
+				<td>EXECUTIVE<br/>SUMMARY:</td>
+				<td colspan="3">
+					<w:DERRichTextAreaPUT name="{GDStr.getPath}" widgetDefaultValue='{txtres.exSum.getText}' addStyleNames='bigRTA'/><!-- hTML='{txtres.exSum.getText}' -->
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					Does this assay satisfy the Test Order requirement for a <g:InlineLabel lName='TWO'/>?
+					<w:DERListBoxYesNo name="{GDStr.getPath}"><g:item>Unknown</g:item></w:DERListBoxYesNo>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					If it does not satisfy the requirement,<br/>concisely list only the major deficiencies<br/>and refer to deficiency section.					
+				</td>
+				<td colspan="2">
+					<w:DERRichTextAreaPUT name="{GDStr.getPath}"/>					
+				</td>
+			</tr>
+			<tr>
+				<td>Compliance:
+				</td>
+				<td colspan="3">Were signed and dated GLP and Quality Assurance statements provided?
+					<w:DERListBoxYesNo name="{GDStr.getPath}"/>	
+				</td><!-- 
+				<td><w:AMA2ListBoxYesNo/>					
+				</td> -->
+			</tr>
+		</table>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

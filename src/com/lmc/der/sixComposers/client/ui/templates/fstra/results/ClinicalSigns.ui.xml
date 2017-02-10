@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width='110ex'>
+		<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>ClinicalSigns>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+					<p style="color:FireBrick">
+						[Discuss qualitative observations of secondary sex characteristics and the incidence of behavioral effects or other clinical signs.
+						Identify when during the study the effects were observed and whether the effects are considered treatment-related.
+						Complete the following table, using a separate line for each type of observation. Add rows as necessary.]
+					</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 21: Secondary Sex Characteristics and Clinical Signs in [test organism].
+		</div>
+		<tblfs:FSTRATable21/>
+		<div>
+			Abbreviations:    
+			<sup>1</sup>  Define any abbreviations used to identify secondary sex characteristics and clinical signs (i.e., sublethal effects, including behavioral effects) not specified elsewhere in the results.
+			Examples include discoloration, changes in dorsal nape pad, abnormal swimming behavior, lethargy, loss of equilibrium, hemorrhage, malformations, lesions, etc. Add rows as necessary.
+			Note that nuptial tubercle score is reported previously in Table 12. 
+		</div>
+		<div>
+			<g:Button btnName='TYPE_ADD'>
+						Add Type
+			</g:Button>
+			<g:Button btnName='TYPE_REM'>
+						Remove Type
+			</g:Button>
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>ClinicalSigns>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

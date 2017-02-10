@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width='90ex'>
+		<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>GSI>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+					<p style="color:FireBrick">
+						[Briefly summarize any effects on gonado-somatic index (GSI). Report all concentrations at which effects were
+						observed and the direction of the effect, i.e., apparent increase or decrease when compared to control.]
+					</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 13: Gonado-Somatic Index (GSI) in [test organism].
+		</div>
+		<tblfs:FSTRATable13/>
+		<div>
+			Abbreviations: NA Not applicable. ND Not determined. SD Standard deviation.           
+			<sup>1</sup>  Gonado-somatic index (%) is calculated as gonad weight (to the nearest 0.1 mg) / body weight (mg) x 100.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>GSI>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

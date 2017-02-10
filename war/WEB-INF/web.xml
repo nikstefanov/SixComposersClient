@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	 <servlet>
+	 	<servlet-name>HostPage</servlet-name>
+	 	<jsp-file>/SixComposersClient.html</jsp-file>
+	 </servlet>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/AMA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/ama</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/FSTRA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/fstra</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/MPA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/mpa</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/FPA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/fpa</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/UA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/ua</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/HA</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HostPage</servlet-name>
+		<url-pattern>/ha</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+    	<welcome-file>SixComposersClient.html</welcome-file>
+  	</welcome-file-list>
+</web-app>

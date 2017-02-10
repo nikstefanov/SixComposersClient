@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<g:HTMLPanel>
+		<table>
+		<col style="width:15ex"/><col /><col style="width:40ex"/>
+			<tr>
+				<td>Histopathology</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}"/></td>
+				<td>The incidence of histopathological findings of the thyroid gland
+				are presented below in Table 7.
+				This table is mandatory; limit text to integration of findings,
+				highlights; relate with other findings, as appropriate).</td>
+			</tr>
+		</table>
+		<div style="font-weight:bold">TABLE 7. Incidence of Histopathological Lesions of the Thyroid Gland<sup>a</sup></div>
+		<tbl_mpa:MPATable7/>
+		<table>
+		    <tr>
+		        <td>Footnotes:</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='tableCommentRTA'>
+		               	<p style="font-size:smaller;"><sup>a</sup> Data were obtained from page <span style="color:firebrick">[#]</span> of the study report.<br/>
+						<sup>b</sup> Thyroid histopathology is graded 0 – 4 based on severity:
+						0= Not remarkable, 1= Mild, 2= Moderate, 3= Severe,	4= .<br/>
+						See OECD No. 82 for reference.<br/>
+						O = No. Observed. E =  No. Examined</p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		    </tr>
+		</table>				
+	</g:HTMLPanel>
+</ui:UiBinder> 

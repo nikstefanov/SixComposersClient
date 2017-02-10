@@ -1,0 +1,255 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="92ex">
+		<table>
+		 <col style="width:13ex"/><col/><col style="width:54ex"/>		
+			<tr>
+				<td style="text-decoration:underline">Test Substance:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>CommonName"/></td>
+				<td>Common name as used by Agency.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Description:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>Description"/></td>
+				<td>e.g. technical, nature, color, molecular weight, and relevant physicochemical properties.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Source:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>Source"/></td>
+				<td>Company (and catalog number if available).</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>LotBatchNum"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>LotBatchExpDate"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Purity:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>Purity"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Stability:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>Stability"/></td>
+				<td>How many days and under what condition?</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">CAS&nbsp;#:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>CasNum"/></td>
+				<td>CAS # or Not available</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Structure:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestSubstance>>Structure>>Description"/></td>
+				<td>[Structure] or Not Available				    
+				</td>
+			</tr>
+		</table>
+		
+		<upl:UploadableImage xmlns:upl="urn:import:com.gwt.der.lib.client.upload.image"
+		sendFilenameTo="UA||MaterialsAndMethods>>TestSubstance>>Structure>>AttachedFileInside>>FileName"
+		/>
+	    <div>A previously uploaded file can be found in the "Attachments" tab, under the name "Structure file".
+			 Uploading a new file will discard a previously uploaded file.
+			 Only files with one of the following extentions will be rendered in the generated docx:
+			 .txt, .rtf, .htm, .html, .xht, .xhtml, .mht, .docx,
+			 .dotx, .docm, .dotm, .jpg, .gif, .tiff, .bmp, .png.
+			 Please, use only correct files, otherwise a corrupted docx will be produced. 
+		</div>
+					
+		<div>&nbsp;</div>
+		<table>
+			<col style="width:13ex"/><col/><col style="width:54ex"/>			
+			<tr>			
+				<td style="text-decoration:underline">Reference Estrogen:</td>
+				<td>17&alpha;-ethynyl estradiol (EE)
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Supplier:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>ReferenceEstrogen>>Supplier"/></td>
+				<td>Source/company (City, State [and Country, if outside U.S.A.])</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>ReferenceEstrogen>>LotBatch"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>ReferenceEstrogen>>LotBatchExpDate"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Purity:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>ReferenceEstrogen>>Purity"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">CAS #:</td>
+				<td>57-63-6</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr>			
+				<td style="text-decoration:underline">Solvent/Vehicle Control:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>SolventVehicleControl>>Name"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Supplier:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>SolventVehicleControl>>Supplier"/></td>
+				<td>Source/company (City, State [and Country, if outside U.S.A.])</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>SolventVehicleControl>>LotBatch"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration date:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>SolventVehicleControl>>LotBatchExpDate"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Rationale</div><div>(if not water):</div></td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>SolventVehicleControl>>Rationale"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Final&nbsp;concetration:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>SolventVehicleControl>>FinalConcentration"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Test Animals:</td>								
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Species:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Species">Rat or Mouse</w:DERTextBoxLength></td>
+				<td>If mouse, provide rationale.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Strain:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Strain">
+				    Sprague-Dawley or Wistar
+				</w:DERTextBoxLength></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Age at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[0]AgeAndWeight>>DaysOldLow" visibleLength='2'/> - <w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[0]AgeAndWeight>>DaysOldHigh" visibleLength='2'/></td>
+				<td>days old</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Weight at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[0]AgeAndWeight>>DoseWeightLow" visibleLength='2'/> - <w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[0]AgeAndWeight>>DoseWeightHigh" visibleLength='2'/></td>
+				<td>g</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Age at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[1]AgeAndWeight>>DaysOldLow" visibleLength='2'/> - <w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[1]AgeAndWeight>>DaysOldHigh" visibleLength='2'/></td>
+				<td>days old</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Weight at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[1]AgeAndWeight>>DoseWeightLow" visibleLength='2'/> - <w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>[1]AgeAndWeight>>DoseWeightHigh" visibleLength='2'/></td>
+				<td>g</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Source:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Source"/></td>
+				<td>Supplier(city, state and country, if outside U.S.).</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div style="padding-left:3ex">
+				    The DER should state if animals were born in-house or shipped with dam prior to weaning.
+				    If the latter, information on the acclimation period prior to dose initiation should be included.
+				    The reviewer should include information on age at receipt, duration of acclimation,
+				    and age at initiation and termination of dosing in the appropriate sections of the DER.
+				   	</div></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Housing:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Housing"/></td>
+				<td>##/cage, type of cage, and bedding, etc.
+					[e.g., 3/cage in stainless steel cages, suspended above cage board]
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div style="padding-left:3ex">
+					Housing may be individual for young adult females or in groups of up to three per cage.
+					Group housing is preferred for immature animals.  Bedding material should contain
+					a minimal amount of phytoestrogens; and corn cob bedding should generally be avoided,
+					as it affects the estrous cycle in rats via an apparent anti estrogenic mechanism.
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Diet:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Diet"/></td>
+				<td>Diet name, source, phytoestrogen concentration, ad libitum</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div style="padding-left:3ex">
+					High levels of phytoestrogens in laboratory diets, primarily from soy and alfalfa products,
+					can increase uterine weights in rodents to an extent high enough to interfere with the Uterotrophic Assay.
+					Furthermore, in immature intact females, high levels of phytoestrogens may accelerate the onset of puberty.
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Water:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Water"/></td>
+				<td>Source,treatment [e.g., Reverse-osmosis filtered tap water],ad libitum</td>
+			</tr>
+			<tr>
+				
+				<td style="text-indent:3ex;text-decoration:underline">
+				    <div >Environmental</div><div>Conditions:</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Temperature:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Temperature"/></td>
+				<td>&deg;C</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Humidity:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>Humidity"/></td>
+				<td>%C</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Air changes:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>AirChanges"/></td>
+				<td>/hr</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Photoperiod:</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>PhotoPeriodLight"/></td>
+				<td>hrs light</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>PhotoPeriodDark"/></td>
+				<td>hrs dark</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">
+				    <div>Acclimation</div><div>period:</div>
+				</td>
+				<td><w:DERTextBoxLength name="UA||MaterialsAndMethods>>TestAnimals>>AcclimationPeriod"/></td>
+				<td>For immature females, note if pups were housed with their dam</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

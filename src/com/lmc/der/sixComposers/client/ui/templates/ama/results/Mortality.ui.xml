@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Mortality>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+						<p style="color:FireBrick">
+							[Describe any effects of the test substance on larval mortality.  Compare results of the test item treatments with the available reference toxicity endpoints.  The guideline recommends that mortality in controls be &le;10% and that there be at least two test concentrations without overt toxicity.]						
+						</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 9: Larval Mortality in [test organism].
+		</div>
+		<tbl_ama:AMA2Table9/>
+		<div>
+			Abbreviations:
+							<sup>NA</sup> Not applicable.
+							<sup>1</sup> Sample size and cumulative mortality values at Day 7 prior to interim sacrifice.							
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Mortality>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

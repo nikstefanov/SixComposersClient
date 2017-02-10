@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+	    <table>
+		<col style="width:15ex"/><col /><col style="width:40ex"/>
+			<tr>
+				<td>Histopathology</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}"/></td>
+			</tr>
+	   </table>
+	    <div style="font-weight:bold">TABLE 8.  Incidence of Histopathological Lesions of the
+	        <ui:text from='{GDStr.getTable8Cap}'/> and Kidney<sup>a</sup></div>
+		<tbl_mpa:MPATable8 tblName="TBL8"/>
+		<g:Button btnName="OBS8_ADD"/>
+		<g:Button btnName="OBS8_REM"/>
+		<table>
+		    <tr>
+		        <td>Footnotes:</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='tableCommentRTA'>
+		                <p style="font-size:smaller;"><sup>a</sup> Data were obtained from page
+		                <span style="color:firebrick">[#]</span> of the study report.</p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		    </tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

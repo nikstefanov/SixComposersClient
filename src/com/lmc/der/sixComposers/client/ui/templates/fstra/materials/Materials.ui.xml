@@ -1,0 +1,198 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	>
+	<ui:style>		
+	</ui:style>	
+	<g:HTMLPanel width="110ex">
+		<table>
+		<col/><col/>
+		<tr>
+			<td>
+				GUIDELINE FOLLOWED:
+			</td>
+			<td>
+				<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>GuidelineFollowed>>Html" addStyleNames='bigRTA' ui:field='rta_guideline'>
+					<p style="color:FireBrick">
+						[Specify the guideline(s) that were followed and any deviations from the guideline(s).  State if the deviations affect the validity of the study.]
+					</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				COMPLIANCE:
+			</td>
+			<td>
+				<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>Compliance>>Html" addStyleNames='bigRTA' ui:field='rta_compliance'>
+					<p style="color:FireBrick">
+						[Indicate if signed and dated GLP, Quality Assurance and Data Confidentiality statements were provided.]
+					</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color:firebrick">
+				[Complete this subsection using the information provided in the methodology section of the study report.
+				Include the name of the test material and CAS number as cited in the study report.]
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				A.Test Material
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>TestMaterialName" ui:field='tb_test_mat'>
+					
+				</w:DERTextBoxLength>
+			</td>
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				CAS number:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>CASNo" ui:field='tb_cas_no'/>
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				Description:
+			</td>
+		</tr>		
+		<tr style="text-indent:4ex">
+			<td>
+				Water solubility:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>WaterSolubility" ui:field='tb_water_sol'/>&nbsp;mg/L at 25 &deg;C				
+			</td>			
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				Melting Point:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>MeltingPoint" ui:field='tb_melt_point'/>&nbsp;&deg;C				
+			</td>			
+		</tr>		
+		<tr style="text-indent:4ex">
+			<td>
+				Boiling Point:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>BoilingPoint" ui:field='tb_boil_point'/>&nbsp;&deg;C
+			</td>			
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				Stability in Water:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>StabilityWater" ui:field='tb_stab_water'/>
+			</td>
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				Stability in Light:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>StabilityLight" ui:field='tb_stab_light'/>
+			</td>
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				pKa:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>PKa" ui:field='tb_pka'/>
+			</td>
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				Kow (Pow):
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>Kow" ui:field='tb_kow'/>
+			</td>
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				Vapor Pressure:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>VaporPressure" ui:field='tb_vapor_press'/>&nbsp;torr
+			</td>
+		</tr>
+		<tr style="text-indent:4ex">
+			<td>
+				Expiration Date:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Description>>ExpirationDate" ui:field='tb_exp_date'/><span style="color:firebrick">DD-Month-YYYY</span>
+			</td>			
+		</tr>
+		<tr>
+			<td>
+				Lot No./Batch No.:
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>LotNo" ui:field='tb_lot_no'/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Purity (%):
+			</td>
+			<td>
+				<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>TestMaterial>>Purity" ui:field='tb_purity'>
+					
+				</w:DERTextBoxLength>&nbsp;%
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">	
+				Indicate the % of active ingredient or purity of the test substance.
+				If radiolabeled material was used, indicate the radiopurity and the location(s) of the label.
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				Impurities:
+			</td>
+			<td>
+				<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestMaterial>>Impurities>>Html" addStyleNames='smallRTA' ui:field='rta_impurities'>
+					<p style="color:FireBrick">
+						[Identify any impurities reported.]
+					</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Stability of Compound:
+			</td>
+			<td>
+				<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestMaterial>>StabilityOfCompound>>Html" addStyleNames='smallRTA' ui:field='rta_stab_compound'>
+					<p style="color:FireBrick">
+						[Briefly describe the stability of the test item and identify the source of information.]
+					</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Storage conditions of test chemicals:
+			</td>
+			<td>
+				<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>TestMaterial>>StorageConditions>>Html" addStyleNames='smallRTA' ui:field='rta_stor_cond'>
+					<p style="color:FireBrick">
+						[Indicate if the test material was frozen, refrigerated, maintained in the dark, and duration of storage.]
+					</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		</table>		
+	</g:HTMLPanel>
+</ui:UiBinder> 

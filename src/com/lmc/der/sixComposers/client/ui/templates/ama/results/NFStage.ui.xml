@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>NFStage>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+						<p style="color:FireBrick">
+							[Briefly summarize developmental stage observations.
+							 Report whether control performance, based on NF stage at test termination, was consistent with guideline recommendations; the guideline recommends that minimum median developmental stage of controls at test termination be NF Stage 57 and that the 10th and 90th percentiles not differ by more than 4 NF stages.  
+							 Compare median developmental stage across treatment levels, at Day 7 and Day 21.  Report all concentrations at which effects were observed and the direction of the effect, e.g., apparent advance or delay in median developmental stage when compared to control.  
+							 Report any observations of asynchronous development (tadpoles that cannot be staged), including the number of tadpoles affected and the relevant test concentration(s).  Compare any effects observed with effects in tests with the reference chemical (if reported).]
+						</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 10: Larval Development in [test organism] ??? Developmental Stage and Asynchronous Development.
+		</div>
+		<tbl_ama:AMA2Table10/>
+		<div>
+			Abbreviations:
+							<sup>NA</sup> Not applicable.														
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>NFStage>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

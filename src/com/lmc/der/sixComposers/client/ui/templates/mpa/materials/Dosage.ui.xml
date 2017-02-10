@@ -1,0 +1,118 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	
+	<g:HTMLPanel width="110ex">
+		<table>
+			<col style="width:30ex"/><col/><col style="width:40ex"/>
+			<tr>
+				<td style="text-decoration:underline">Dose Preparation and Analysis</td>
+			</tr>
+			<tr>
+				<td>Dose formulations were prepared
+					daily by mixing appropriate
+					amounts of test substance with
+				</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Vehicle.</td>
+			</tr>
+			<tr>
+				<td>Homogeneity and stability were tested at</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>State when, what dose levels, duration, and temperature.</td>
+			</tr>
+			<tr>
+				<td>During the study, samples of
+					dose formulations were analyzed
+					for achieved concentration.</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>State when and at what dose levels.</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Results of Dose Analysis
+				</td>
+			</tr>
+			<tr>
+				<td>Homogeneity:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>Concentration range as percent of nominal and/or coefficient of variation for different strata (e.g., top, middle, and bottom).</td>
+			</tr>
+			<tr>
+				<td>Stability:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>Range of values for each temperature and duration tested, expressed as percent of initial (preferable) or percent of nominal concentration.</td>
+			</tr>
+			<tr>
+				<td>Concentration:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>Range of values expressed as percent of nominal.</td>
+			</tr>
+			<tr>
+				<td colspan="3">The analytical data indicated that the mixing procedure was adequate.
+				<w:DERListBoxYesNo name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td colspan="3">And that the variation between nominal and actual dosage to the animals was acceptable.
+				<w:DERListBoxYesNo name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td>Describe any deficiencies noted.</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>				
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Dosage Administration
+				</td>
+			</tr>
+			<tr>
+				<td>All doses were administered once
+					daily by gavage from PND 23
+					through PND53,in a volume of</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='9'/>&nbsp;mL/kg of body weight</td>
+				<td>Recommended range from 2.5 to 5.0.</td>
+			</tr>
+			<tr>
+				<td>Dosing was performed daily between</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='9'>0700
+					</w:DERTextBoxLength>&nbsp;and
+					<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='9'>0900
+					</w:DERTextBoxLength>
+					&nbsp;hours</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Statistics:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" /></td>
+				<td>The following describes the statistical analyses recommended by the test
+					guideline and may be used by the reviewer for verification.
+					The DER should list parameters that were analyzed and the statistical methods
+					used and include a statement as to whether or not the Reviewer considers
+					the analyses to be appropriate. If inappropriate, provide alternative/rationale.</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+				The data should be analyzed for normal distribution and homogeneity of variance in order to satisfy the assumptions of
+				Analysis of Variance (ANOVA) and Analysis of Covariance (ANCOVA)). It is recommended that all data
+				(i.e., initial body weight [PND 23], body weight gain, age and body weight at preputial separation, terminal body weight,
+				organ weights, and serum hormones be analyzed by ANOVA.  If the study was conducted in blocks, then the recommended analysis
+				is to use to a two-way ANOVA with Block and Treatment as main effects.  It is recommended age and body weight at preputial
+				separation and all organ weights also be analyzed by ANCOVA, using the body weight at PND 23 as the covariate.
+				When statistically significant effects among groups are observed (p&lt;0.05), appropriate pair-wise comparison tests
+				would be needed in order to identify which dose group is significantly different from the control group.
+				Where there is heterogeneity of variance, data should be transformed appropriately to achieve homogeneous variances prior to ANOVA/ANCOVA,
+				or analyzed using an appropriate nonparametric test.  However, non parametric analysis would generally be the method of last resort
+				as it does not allow analysis of covariance.  In addition to ANOVA and ANCOVA, it is recommended that the unadjusted and adjusted
+				values be examined for linear trend with dose level.
+				</td>
+			</tr>
+		</table>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

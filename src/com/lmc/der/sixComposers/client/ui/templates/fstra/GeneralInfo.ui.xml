@@ -1,0 +1,242 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	> <!--
+	<ui:with field='htmlres' type='com.lmc.der.ama2.client.AMA2EntryPoint.HTMLResources'/> -->
+	<ui:with field='txtres' type='com.lmc.der.sixComposers.client.ui.FSTRA_UI.TxtResources'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		Test Material:<w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialNameGI"/>&nbsp;Purity(%):<w:DERTextBoxLength name="FSTRA||GeneralInfo>>PurityGI"/><br/>
+		Data Evaluation Record on the Fish Short Term Reproduction Assay with&nbsp;
+		<w:DERAutoSuggestBox name="FSTRA||GeneralInfo>>DERwith" suggboxName='TOX_OF'/>
+		<br/>
+		<table>
+			<tr>
+				<td>Data Requirement:
+				</td>
+				<td>EPA DP Barcode:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>EPADPBarcode"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>OECD Data Point:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>OECDDataPoint"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>EPA MRID:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>EPAMRID"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>EPA Guideline:
+				</td>
+				<td>890.1350
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>Fish Short-Term Reproduction Assay
+				</td>
+			</tr>
+			<tr>
+				<td>Common Name:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialGI>>CommonName"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Chemical Name:
+				</td>
+				<td>IUPAC Name:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialGI>>IUPAC"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>CAS Name:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialGI>>CASName"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>CAS No:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialGI>>CASNoGI"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>Synonyms:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialGI>>Synonyms"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>EPA PC Code:
+				</td>
+				<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>TestMaterialGI>>EPAPCCode"/>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td style="font-weight:bold">
+					Table Reviewers
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<tbl:AMA2TableReviewers/>
+				</td>
+			</tr>
+			<tr>
+				<td><span>
+					<g:Button btnName='REV_ADD'>
+						Add Reviewer
+					</g:Button>
+					</span>
+					<span>
+					<g:Button btnName='REV_REM'>
+						Remove Reviewer
+					</g:Button>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Date Evaluation Completed:
+					<w:DERTextBoxLength name="FSTRA||GeneralInfo>>DateEvaluationCompleted"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="double_bordered" style="padding:0ex 1ex">
+					<p style="color:firebrick">
+						[Instructions, prompts, and example values for the individual(s) completing the DER are shown in the DER template in bracketed red text;
+						these instructions and examples do not need to remain visible in the completed DER.]
+					</p>
+					<p style="font-weight:bold;font-style:italic;">
+						Guideline recommendations are provided in italics; these recommendations should remain visible in the completed DER.
+					</p>
+					<p style="font-style:italic;">
+						<span style="font-weight:bold;">
+							Disclaimer:
+						</span>
+						The guideline recommendations in this DER template are offered as a general reference to aid in preparation of the DER.
+						The purpose of these recommendations is not to serve as substitute for the Test Guidelines,
+						nor to provide any guidance on how the study should be conducted.
+					</p>
+				</td>
+			</tr>
+		</table>
+		<div style="font-weight:bold">
+			Table Citations
+		</div>			
+		<tbl:AMA2TableCitations/>
+		<div>Indicate: Author(s),Year, Study Title, Laboratory Name and Location, Laboratory Report Number,<br/>Sponsor, Full Study Date. If published, list the name of the journal, vol., pages, year.
+		</div>			
+		<div><span>
+			<g:Button btnName='CIT_ADD'>
+				Add Citation
+			</g:Button>
+			</span>
+			<span>
+			<g:Button btnName='CIT_REM'>
+				Remove Citation
+			</g:Button>
+			</span>
+		</div> 
+		<table>			
+			<tr>
+				<td>
+						EXECUTIVE SUMMARY:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||GeneralInfo>>ExecutiveSummary>>Html" widgetDefaultValue='{txtres.exSum.getText}'/>
+				</td>
+			</tr>
+		</table>
+		<div>
+			Does this assay satisfy the Test Order requirement for a Fish Short-Term Reproduction Assay (OCSPP Guideline 890.1350)?&nbsp;
+			<w:DERListBoxYesNo name="FSTRA||GeneralInfo>>SatisfactionTORequirement"><g:item>Unknown</g:item></w:DERListBoxYesNo>
+		</div>
+		<table>
+			<tr>
+				<td>Concisely list the major deficiencies:</td>
+				<td><w:DERRichTextAreaPUT name="FSTRA||GeneralInfo>>MajorDeficiencies>>Html"/></td>
+			</tr>
+		</table>
+		<div>
+			Test organism age at test initiation:&nbsp;<w:DERTextBoxLength name="FSTRA||GeneralInfo>>ResultsSynopsis>>Age"/>&nbsp;months.
+		</div>
+		<table>
+				<tr style="text-align:center">
+					<td>						
+					</td>
+					<td>Males
+					</td>
+					<td>Females
+					</td>					
+				</tr>
+				<tr>
+					<td>Mean body weight at test initiation (if measured):
+					</td>
+					<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>ResultsSynopsis>>MeanBodyWeight>>Male"/>&nbsp;g
+					</td>
+					<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>ResultsSynopsis>>MeanBodyWeight>>Female"/>&nbsp;g
+					</td>
+				</tr>
+				<tr>
+					<td>Mean length at test initiation (if measured):
+					</td>
+					<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>ResultsSynopsis>>MeanLenght>>Male"/>&nbsp;mm
+					</td>
+					<td><w:DERTextBoxLength name="FSTRA||GeneralInfo>>ResultsSynopsis>>MeanLenght>>Female"/>&nbsp;mm
+					</td>
+				</tr>
+		</table>
+		<div>
+			Exposure Type:&nbsp;<w:DERAutoSuggestBox name="FSTRA||GeneralInfo>>ResultsSynopsis>>ExposureType" suggboxName='EXPOSURE'/>
+			<span style="color:gray">
+			 				Typing comma pulls out the list menu again.
+			 			</span>						
+		</div>
+		<div style="font-weight:bold">			
+			Table 1: Summary of Reproductive and HPG Effects<sup>1,2</sup> in the Fish Short-Term Reproduction Assay (FSTRA) with [test chemical]. 
+		</div>
+		<tblfs:FSTRATable1/>
+		<div>
+			Abbreviations:
+							Conc. Concentration, Diff. Difference, E2 17&beta;-estradiol,F Female, Fert. Fertilization,
+							GSI Gonado-Somatic Index, Histo. Histopathology, M Male, T Testosterone, VTG Vitellogenin,
+							NA Not applicable.							
+							<sup>1</sup> A 'yes' indicates a significant difference based on comparison to the negative (clean water) control, unless otherwise specified.
+							<sup>2</sup> The criteria for significance are described in the Reviewer's Analysis and Statistical Verification sections of the DER. Conclusions regarding histopathology may be heavily weighted by the expert opinion of a board-certified pathologist.							
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

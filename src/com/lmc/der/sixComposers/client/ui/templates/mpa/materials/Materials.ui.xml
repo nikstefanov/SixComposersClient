@@ -1,0 +1,217 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	
+	<g:HTMLPanel width="92ex">
+		<table>
+		 <col style="width:13ex"/><col/><col style="width:54ex"/>
+			<tr>
+				<td style="text-decoration:underline">Test Facility:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Name of the Facility.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Location:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Study&nbsp;Director:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Other&nbsp;Personnel:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Name and study responsibility.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Study&nbsp;Start&nbsp;Date:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Study&nbsp;End&nbsp;Date:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Test Substance:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Common name as used by Agency.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Description:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>e.g. technical, nature, color, odor, and molecular weight.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Source:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Company (and catalog number if available).</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Purity:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Stability:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Provide available data.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">CAS&nbsp;#:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Structure:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+		</table>
+		<upl:UploadableImage xmlns:upl="urn:import:com.gwt.der.lib.client.upload.image"		
+		/><!-- derType="{GDStr.getAssay}" filename="Structure file" sendFilenameTo="{GDStr.getPath}"  -->
+	    <div>A previously uploaded file can be found in the "Attachments" tab, under the name "Structure file".
+			 Uploading a new file will discard a previously uploaded file.
+			 Only files with one of the following extentions will be rendered in the generated docx:
+			 .txt, .rtf, .htm, .html, .xht, .xhtml, .mht, .docx,
+			 .dotx, .docm, .dotm, .jpg, .gif, .tiff, .bmp, .png.
+			 Please, use only correct files, otherwise a corrupted docx will be produced. 
+		</div>					
+		<div>&nbsp;</div>			
+			
+		<table>
+		 	<col style="width:13ex"/><col/><col style="width:54ex"/>
+			<tr>			
+				<td style="text-decoration:underline">Vehicle:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}">
+					Corn oil, Water, or Carboxymethylcellulose
+					</w:DERTextBoxLength>
+				</td>
+				<td>Solvents such as Acetone and DMSO should be avoided.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration date:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Test Animals:</td>								
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Species:</td>
+				<td>Rat</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Strain:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Sprague-Dawley (preferred), Wistar, or Long-Evans</td>
+			</tr>
+			<tr>
+				<td><div style="text-indent:3ex">Age at</div>
+					<div style="text-indent:3ex">Study Initiation:</div></td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>PND</td>
+			</tr>
+			<tr>
+				<td><div style="text-indent:3ex">Weight at</div>
+					<div style="text-indent:3ex">Study Initiation:</div></td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}">from - to</w:DERTextBoxLength></td>
+				<td>g <g:InlineLabel lName="GENDER"/>s only</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Source:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Supplier(city, state and country, if outside U.S.)</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Housing:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>##/cage, type of cage, and bedding, etc.
+					[e.g., 3/cage in stainless steel cages, suspended above cage board]<!-- 
+					Recommended housing is 2-3 animals of the same dose group/cage)<br/>
+					with heat-treated laboratory-grade wood shavings (not cedar) as<br/>
+					bedding. Corn cob bedding is NOT recommended due to potential<br/>
+					to disrupt endocrine activity. -->
+					</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div style="padding-left:3ex">
+					Recommended housing is 2-3 animals of the same dose group/cage)
+					with heat-treated laboratory-grade wood shavings
+					(not cedar) as
+					bedding. Corn cob bedding is NOT recommended due to potential
+					to disrupt endocrine activity.
+					</div><!-- 
+					<div style="text-indent:3ex">(not cedar) as
+					bedding. Corn cob bedding is NOT recommended due to potential
+					to disrupt endocrine activity.
+					</div> -->
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Diet:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Diet name, source, ad libitum</td>
+			</tr>
+			<tr>
+				<td><div style="text-indent:3ex">Phytoestrogen</div>
+					<div style="text-indent:3ex">content:</div></td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>&micro;g of genistein equivalents/gram diet</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Water:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>Source,treatment [e.g., Reverse-osmosis filtered tap water],ad libitum</td>
+			</tr>
+			<tr>
+				<!--<td colspan="2" style="text-indent:3ex">Environmental&nbsp;Conditions:</td>-->
+				<td><div style="text-indent:3ex;text-decoration:underline">Environmental</div>
+					<div style="text-indent:3ex;text-decoration:underline">Conditions:</div></td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Temperature:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>&deg;C</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Humidity:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Air changes:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>/hr</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Photoperiod:</td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>hrs light</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><w:DERTextBoxLength name="{GDStr.getPath}"/></td>
+				<td>hrs dark</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

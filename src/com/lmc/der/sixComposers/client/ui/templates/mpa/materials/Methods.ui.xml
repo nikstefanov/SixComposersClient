@@ -1,0 +1,160 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="91ex">
+	<table>
+	<col style="width:20ex"/><col style="width:71ex"/>
+	<tr>
+		<td>Mortality and Clinical Examinations:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}">
+				<p>All animals were examined <span style="color:firebrick">[frequency; e.g. twice daily]</span>
+				for mortality and moribundity.
+				Clinical examinations were conducted <span style="color:firebrick">[frequency]</span>.</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Body Weight:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'>
+			Animals were weighed daily prior to dosing.
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Preputial Separation (PPS):</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'>
+			<p>Beginning on PND <span style="color:firebrick">[30]</span>,
+				 all animals were examined daily for onset of PPS.
+				Age and weight at on the day of completion of PPS were recorded.</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Sacrifice and Pathology:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+			<p>On the day of termination, rats were removed one at a time from their home cages to a separate room
+			for euthanasia and terminal procedures so as not to induce stress-related
+			responses in other animals which may affect hormone measurements.
+			All surviving animals were sacrificed
+			<span style="color:firebrick">[
+			<span style="font-style:italic">(describe method; preferred method is decapitation without anesthesia)</span>
+			]</span>
+			on PND
+			<span style="color:firebrick">[53]</span>
+			approximately 2 hours post-dosing.
+			<span style="color:firebrick;font-style:italic">(The guideline recommends sacrifices be completed by 1300 hours
+			due to normal diurnal fluctuation in thyroid hormone levels)</span>
+			Blood from the trunk of the animals was collected immediately
+			into serum separation tubes, processed <span style="color:firebrick">[method]</span>
+			, and stored at <span style="color:firebrick">[temperature]
+			<span style="font-style:italic">(should be -20°C or colder)</span></span>; for subsequent hormone and clinical chemistry evaluations.
+			<span style="color:firebrick;font-style:italic">(Historical control data should be provided.)</span>
+			</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Hormone Analysis:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" >
+			<p>Total testosterone, total thyroxine (T<sub>4</sub>), and thyroid stimulating hormone (TSH) levels were analyzed using
+			<span style="color:firebrick">[assay type; radioimmunoassay (RIA), immunoradiometric assay (IRMA),
+			enzyme-linked immunosorbent assay (ELISA), or time-resolved immunofluorescent procedures.]</span>
+			</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Clinical Chemistry:</td>
+		<td>The following CHECKED (&radic;) parameters were examined.</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<table>
+		<tr>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="ELECTRO_TBL"/>
+				* Recommended<br/>based on guideline<br/>890.1500.
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="ENZYM_TBL"/>
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="OTR1_TBL"/>
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="EMPTY5x1_TBL"/>
+			</td>
+		</tr>		
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Organ Weights and Histopathology:</td>
+		<td>The following CHECKED (&radic;) tissues were collected and weighed.
+			The (&radic;&radic;) organs, in addition, were subjected to histological examination.
+			<span style="color:firebrick;font-style:italic">(Note if not all collected tissues were examined.)</span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<table>
+		<tr>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="URO_TBL"/>				
+			</td>			
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="OTR2_TBL"/>
+				* Weights required based on<br/>guideline 890.1500<br/>
+				** Histopathological examination<br/>required based on guideline 890.1500
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="EMPTY5x2_TBL"/>
+			</td>
+		</tr>		
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+			<p>
+			The testis and epididymis
+			<span style="color:firebrick">[left or right]
+			<span style="font-style:italic">(the guideline recommends that both be from the same side of each animal in the study; report any deviations)</span></span>
+			and kidneys were weighed prior to fixation.  Following weighing, the testis and epididymis
+			were fixed in Bouin’s solution overnight <span style="color:firebrick;font-style:italic">(not to exceed 24 hrs)</span>.
+			The thyroid (with parathyroid) as collected with the trachea and fixed in 10%
+			buffered formalin for at least 24 hrs.
+			Following fixation, the thyroid was dissected free of the trachea and weighed.
+			All collected tissues were routinely processed into paraffin blocks, sectioned, stained with
+			hematoxylin and eosin, and examined microscopically.
+			</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		This is the information that you would be found in the study report conducted following
+		guideline recommendations. Thyroid sections are subjectively evaluated for follicular cell
+		height and colloid area, preferably using a five point grading scale
+		(1 = shortest/smallest; 5 = tallest/largest), and any abnormalities/lesions noted.
+		At least two sections from each of the two lobes of the thyroid should be examined in order
+		to obtain representative sample of the thyroid tissue from each lobe.  Guidance related to
+		the histological evaluation of the testis and epididymis is given in EPA’s
+		Health Effects Test Guideline OPPTS 870.3800: Reproduction and Fertility Effects (US EPA, 1998).
+		Report the histopathological findings in Section II.F.
+		</td>
+	</tr>
+	</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

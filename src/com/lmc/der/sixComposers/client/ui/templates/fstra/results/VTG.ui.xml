@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width='160ex'>
+		<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>VTG>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+					<p style="color:FireBrick">
+						[Briefly summarize any effects on biochemical endpoints, including plasma vitellogenin (VTG), testosterone (T), and 17&beta;-estradiol,
+						if measured. Report all test concentrations at which effects were observed and the direction of the effect,
+						i.e., apparent increase or decrease when compared to control.]
+					</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 19: Plasma Vitellogenin in [test organism]. 
+		</div>
+		<tblfs:FSTRATable19/>
+		<div>
+			Abbreviations: NA  Not applicable. ND  Not determined. SD  Standard deviation.												
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>VTG>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

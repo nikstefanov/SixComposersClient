@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>		
+	</ui:style>	
+	<g:HTMLPanel width='160ex'>		
+		<div style="font-weight:bold">
+			Table 22: Reproductive and HPG Endpoints<sup>1,2</sup> for Male [test organism] in the FSTRA with [test chemical].
+		</div>
+		<tblfs:FSTRATable22/>
+		<div>
+			Abbreviations:  Diff. Difference.  E2 17&beta;-estradiol.  GSI Gonado-Somatic Index.  Histo. Histopathology.  NA Not applicable.  T Testosterone.  VTG Vitellogenin.
+				<sup>1</sup> Unless otherwise indicated, effects and percent (%) differences are reported based on comparison to the negative (clean water) control.
+				Conclusions regarding histopathology may be heavily weighted by the expert opinion of a board-certified pathologist.
+				<sup>2</sup> Unless otherwise specified, effects are considered statistically significant at <span style="color:firebrick">[p&lt;0.05]</span>.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>MaleHPGEndpoints>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,154 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:with field='txtres' type='com.lmc.der.sixComposers.client.ui.Hersh_UI.ExSumResources'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="103ex">
+		<!-- <w:DERTextBoxLength name="" visibleLength="25" maxLength='3'/> -->
+		<div style="font-weight:bold;">Table Reviewers</div>
+		<tbl:FSTRA2FlexTableButtons2 TblName='TBL_REV'/>		
+		<div style="text-align:center;margin:3ex">
+			<span style="font-weight:bold;border:1px solid black;padding:1.5ex 2ex;">
+				DATA EVALUATION RECORD
+			</span>
+		</div>
+		<table>
+		    <col style="width:14ex"/>
+		    <col style="width:32ex"/>
+		    <col style="width:16ex"/>
+		    <col style="width:36ex"/>
+			<tr>
+				<td>STUDY TYPE:&nbsp;</td>
+				<td>Uterotrophic Assay (Rat); OCSPP 890.1600; OECD 440
+				</td>
+				<td>Year of Study:</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>StudyYear"/></td>
+			</tr>
+			<tr>
+				<td>PC Code:&nbsp;</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>PCCode"/></td>
+				<td>DP Barcode:&nbsp;</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>DPBarcode"/></td>
+			</tr>
+			<tr>
+				<td>TXR#:&nbsp;</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>TXRNumber"/></td>
+				<td>CAS No:&nbsp;</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>TestMaterial>>CASNumber"/></td>
+			</tr>
+			<tr>
+				<td>TEST MATERIAL:&nbsp;</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>TestMaterial>>Name" visibleLength="30"/></td>
+				<td colspan="2">Use name of material tested as referred to in the study
+						(common agency chemical name in parenthesis).
+				</td>				
+			</tr>
+			<tr>
+				<td>Purity:</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>TestMaterial>>Purity">0.00</w:DERTextBoxLength>&nbsp;%</td>
+			</tr>
+			<tr>
+				<td>Synonyms:</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>TestMaterial>>Synonyms" visibleLength="30"/></td>
+				<td colspan="2">Other names and codes.</td>
+			</tr><!-- 
+			<tr>
+				<td>MRIDs:</td>
+				<td><w:DERTextBoxLength name=""/></td>
+				<td colspan="2">Comma separated,no hyphen.</td>
+			</tr>
+			<tr>
+				<td>Citations:</td>
+				<td colspan="3"><w:DERRichTextAreaPUT name="" addStyleNames='bigRTA'>
+						<p>Author 
+							<span style="color:firebrick;font-style:italic;">
+								(up to 3, see SOP for exact format)
+							</span>. (<span style="color:firebrick;">[Study Year]</span>).
+							Title. Laboratory name and location.  Laboratory report number, study completion date. Unpublished.
+							<span style="color:firebrick;font-style:italic;">
+								(OR if published, list Journal name, vol.:pages)
+							</span>
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr> -->
+			<tr>
+				<td colspan="4">
+					<div style="font-weight:bold">
+						Table Citations
+					</div>			
+					<tbl:FSTRA2FlexTableButtons2 TblName='TBL_CIT'
+					    note="Indicate: Author(s),Year, Study Title, Laboratory Name and Location, Laboratory Report Number, Sponsor, Full Study Date. If published, list the name of the journal, vol., pages, year."/>		
+				</td>
+			</tr>
+			<tr>
+				<td>Sponsor:</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>Sponsor"/></td>
+				<td colspan="2">Name of Study Sponsor.</td>
+			</tr>
+			<tr>
+				<td>Test Order #:</td>
+				<td><w:DERTextBoxLength name="UA||GeneralInfo>>TestOrderNumber"/></td>
+				<td colspan="2">Test Order Recipient or the Consortium No.<br/>(e.g., EDSP-PC Code-###)</td>
+			</tr>
+			<tr>
+				<td>EXECUTIVE<br/>SUMMARY:</td>
+				<td colspan="3">
+					<w:DERRichTextAreaPUT name="UA||GeneralInfo>>ExecutiveSummary>>Html"
+					     widgetDefaultValue='{txtres.exSum.getText}' addStyleNames='bigRTA'/><!-- hTML='{txtres.exSum.getText}' -->
+				</td>
+			</tr>
+			<tr>
+			    <td colspan='4'>
+			        Include a brief summary of the results and a conclusion regarding the estrogenic or
+			        anti estrogenic activity of the test substance.  Anti estrogenic activity is
+			        generally indicated by a statistically significant decrease in wet or
+			        blotted uterine weight of the treated groups (test substance + EE) compared to
+			        the EE only control group.  Estrogenic activity is generally indicated by a significant
+			        increase in wet and/or blotted uterine weight compared to the vehicle control.
+			        Report any additional data that corroborate or confound the interpretation of
+			        the uterine weight data.  Discuss any major deficiencies, failure to meet performance
+			        criteria or any problems encountered in this study.
+			    </td>
+			</tr>
+		</table>
+		<table>
+		    <col style="width:25ex"/>
+		    <col style="width:72ex"/>
+			<tr>
+				<td colspan="2">
+					Does this assay satisfy the Test Order requirement for an Uterotrophic Assay (OCSPP 890.1600)?
+					<w:DERListBoxYesNo name="UA||GeneralInfo>>TestOrderRequirements"><g:item>Unknown</g:item></w:DERListBoxYesNo>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					If it does not satisfy the requirement, concisely list only the major deficiencies and refer to deficiency section.					
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="UA||GeneralInfo>>MajorDeficiencies>>Html" addStyleNames='tableCommentRTA'/>					
+				</td>
+			</tr>
+			<tr>				
+				<td colspan="2">Compliance: &nbsp;&nbsp;&nbsp; Were signed and dated GLP and Quality Assurance statements provided?
+					<w:DERListBoxYesNo name="UA||GeneralInfo>>Compliance"/>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Discuss deviations from regulatory requirements.					
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="UA||GeneralInfo>>Deviations>>Html" addStyleNames='tableCommentRTA'/>					
+				</td>
+			</tr>
+		</table>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,109 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_utero="urn:import:com.lmc.der.sixComposers.client.widgets.tables.utero"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="121ex">
+	<table>
+		<col style="width:15ex"/><col/><col style="width:36ex"/>
+		<tr>
+		    <td>Method Deviations</td>
+		    <td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>MethodDeviations>>Html" addStyleNames='tableCommentRTA'/></td>
+		    <td>Any deviations from the suggested guideline methods should be documented.</td>
+		</tr>
+		<tr>
+			<td>In-Life Dates:</td>
+			<td style="text-align:center">Start:&nbsp;<w:DERTextBoxLength name="UA||MaterialsAndMethods>>[0]InLife>>InLifeStart" visibleLength='15'/>&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;End:&nbsp;<w:DERTextBoxLength name="UA||MaterialsAndMethods>>[0]InLife>>InLifeEnd" visibleLength='15'/>
+			</td>
+			<td>Month/Day/Year</td>
+		</tr>
+		<tr>
+		    <td></td>
+			<td style="text-align:center">Start:&nbsp;<w:DERTextBoxLength name="UA||MaterialsAndMethods>>[1]InLife>>InLifeEnd" visibleLength='15'/>&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;End:&nbsp;<w:DERTextBoxLength name="UA||MaterialsAndMethods>>[1]InLife>>InLifeStart" visibleLength='15'/>
+			</td>
+		</tr>
+		<tr>
+			<td>Study Design:</td>
+			<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>StudyDesign>>Html" addStyleNames='bigRTA'>
+			    <p>Following an initial 5-day acclimation period, sexually mature female rats
+			    were ovariectomized on post-natal day (PND) [#] (should be between 42 and 56
+			    days old) according to standard procedures and allowed 14 days (7 if mice)
+			    for recovery and regression of uterine weights prior to initiation of dosing.
+			    Vaginal smears were taken daily during the last five days of the post-ovariectomy
+			    acclimation period and examined microscopically to verify complete removal
+			    of the ovaries as indicated by a lack of estrous cycling.
+			    The dose administration period was from PND [#] through [#].
+			    Rats were euthanized approximately 24 hours later on PND [#]
+			    and necropsied for uterine weight measurements.</p>
+				<p style="color:firebrick">OR</p>
+				<p>Following an initial 5-day acclimation period, immature, intact female rats
+				(or mice) were administered the test substance from PND [#]-[#].
+				Rats were euthanized approximately 24 hours after the last dose
+				and necropsied for uterine weight measurements.
+				The pups were housed with their dam prior to weaning.
+				</p>
+			   </w:DERRichTextAreaPUT></td>
+ 			 <td>Summarize study design information regarding age of animals at ovariectomy,
+ 			 dosing initiation and termination.  Note any concerns or deviations from the guideline
+ 			 that may impact the study.
+			 </td>	    
+		</tr><!-- 
+		<tr>
+			<td>Study Schedule:</td>
+			<td><w:DERRichTextAreaPUT name="" addStyleNames='bigRTA'>
+			    <p>Following the initial 7-day acclimation period, sexually mature male rats were castrated on
+			        PND 42 according to standard procedures and allowed 7 days for recovery and regression of
+			        accessory sex organ weights prior to initiation of dosing.  The dose administration period
+			        was from PND 49 through PND 60.  Rats were euthanized on PND 61approximately 24 hours after
+			        the last dose and necropsied for organ weight measurements.
+			   </p>
+			</w:DERRichTextAreaPUT></td>
+			<td>
+			    Summarize study schedule information regarding age of animals at castration,
+			    dosing initiation, and termination.  Note any concerns or deviations from the guideline that may
+			    impact the study.  Sprague Dawley and Wistar are the preferred strain of rat.  Refer to the SEP
+			    for guidance on other strains.
+			</td>
+		</tr> -->
+		<tr>
+		    <td>Animal Assignment:</td>
+		    <td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>AnimalAssignment>>Html" addStyleNames='bigRTA'>
+		        <p>Animals were assigned, stratified by body weight, to the test groups noted in Table 1.
+		        Statistical analysis indicated that there were no significant differences between
+		        group mean weights at study initiation.
+		        Furthermore, the body weight of each animal was within 20% of the overall mean.</p>
+		    </w:DERRichTextAreaPUT></td>
+		    <td>
+		        Describe procedures for animal assignment
+		         (including factors such as randomization,
+		          blocking by body weight or day of assignment to
+		           allow for staggered necropsy).
+		             Note if animals were within acceptable criteria for weight variability at
+		              study initiation (i.e., no significant differences among group means and
+		               each individual within 20% of the overall mean body weight).
+		               If immature animals were used, state if steps were taken to ensure
+		               that littermates were not assigned to the same group.
+		    </td>
+		</tr>		
+	</table>
+	<div>&nbsp;</div>
+	<div style="text-align:center;">
+	    <span style="font-weight:bold;">Table 1. Study Design<sup>a</sup></span>
+	</div>
+	<tbl_utero:UteroTable1 addStyleNames='centeredObj'/>
+	<div style="text-align:center;">
+		<div><sup>a</sup>Data were obtained from <w:DERTextBoxLength name="UA||MaterialsAndMethods>>RefTable1" visibleLength="4"/> page of the study report.</div>
+		<div>Note that EE is used at the nano-gram level.The EE group serves as a reference estrogen.</div>
+	</div>
+	
+	</g:HTMLPanel>
+</ui:UiBinder>

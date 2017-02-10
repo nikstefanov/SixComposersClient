@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+	<table>
+		<tr>
+			<td>
+				Results:
+			</td>
+			<td>
+				<w:DERRichTextAreaPUT name="" addStyleNames='bigRTA'/>
+			</td>
+			<td style="font-style:italic">
+				Briefly summarize the results.
+			</td>
+		</tr>
+	</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

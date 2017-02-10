@@ -1,0 +1,118 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="121ex">
+	<table>
+		<col style="width:15ex"/><col/><col style="width:36ex"/>
+		<tr>
+			<td>In-Life Dates:</td>
+			<td style="text-align:center">Start:&nbsp;<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='15'/>&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;End:&nbsp;<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength='15'/>
+			</td>
+			<td>Month/Day/Year</td>
+		</tr>
+		<tr>
+			<td>Mating:</td>
+			<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+				<p>Sexually mature males and nulliparous female rats of the same strain were mated (1:1) in house,
+				and mating was confirmed by presence of a copulatory plug and/or examination of sperm in a daily vaginal smear.
+				The day on which positive evidence of mating was observed was designated as gestation day (GD) 0.
+				Litters with more than 8 pups were standardized by culling on PND 4 to 8 pups per litter.
+				</p>
+				<p style="color:firebrick;font-style:italic">OR</p>
+				<p>Time mated pregnant dams were received from the supplier on GD 
+				<span style="color:firebrick">[7, 8, 9, or 10
+					<span style="font-style:italic">(must be on same day for each study)</span>]</span>.
+				Litters with more than 8 pups were standardized by culling on PND 4 to 8 pups per litter.
+				</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+			<td>
+				Describe procedure for obtaining juvenile animals (e.g., bred in-house,
+				including determination of confirmation of pregnancy, OR received pregnant
+				time-mated dams from supplier on GD 7, 8, 9, or 10) and standardizing litter
+				size to 8-10 pups by culling on PND 3 - 5.  Example text is included in the field.
+			</td>
+		</tr>
+		<tr>
+			<td>Animal Assignment:
+			</td>
+			<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+					Offspring were weaned on PND <span style="color:firebrick">[21]</span> and weighed.
+					The rats from the extreme ends of the weight range were eliminated to achieve
+					a mean body weight and variance across dose groups at study initiation.
+					Animals were assigned
+					<span style="color:firebrick;font-style:italic">(note how assigned, e.g., randomized complete block design
+					(time-separated necropsy is the blocking factor))</span>
+					to the test groups noted in Table 1.  Littermates were not assigned to the same treatment group.
+					<span style="color:firebrick;font-style:italic">(The treatment groups include:
+					(1) the vehicle-treated and (2) xenobiotic-treated with at least two dose levels.)</span>
+				</w:DERRichTextAreaPUT>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<table>
+					<tr>
+						<td>
+						<div style="font-weight:bold">TABLE 1. Study Design *</div>
+						<tbl_mpa:MPATable1/>
+						</td>
+						<td style="vertical-align:top">* Data were obtained<br/>from page
+						 	<w:DERTextBoxLength name="{GDStr.getPath}" visibleLength="4"/><br/> 
+						 	of the study report.<br/>
+						 	Medium Dose Level will be<br/>
+						 	included in all tables of<br/>
+						 	the docx file only if it<br/>
+						 	is not leaved blank here.  
+						</td>
+					</tr>
+				</table>				
+			</td>
+		</tr><!-- 
+		<tr>
+			<td>Dose Selection Rationale:</td>
+			<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+				<p>The dose levels were selected based on the results from a range-finding study
+				(MRID <span style="color:firebrick">[#]</span>) in which
+				<span style="color:firebrick">[15]</span> rats/sex/dose group were administered the test substance
+				in corn oil via gavage at doses of 0, 500, or 1000 mg/kg/day from PND <span style="color:firebrick">[23 53]</span>.
+				At 1000 mg/kg/day, body weights were significantly decreased by 15 18% (p&lt;0.05)
+				compared to controls beginning on PND 42, resulting in a decrease of 16% p&lt;0.05)
+				in terminal body weight.  Body weights at 500 mg/kg/day were comparable to controls
+				throughout the study.  There were no mortalities, clinical signs of toxicity,
+				or effects on BUN or creatinine at either dose.</p>
+				</w:DERRichTextAreaPUT>
+			</td>
+			<td>
+				Briefly describe any range-finding study, including information regarding the study
+				identification (laboratory report or MRID number), study type (i.e., duration,
+				route of administration, species), dose levels, effects, and conclusions.
+				The guideline recommends that the highest dose level be at or just below the Maximum Tolerated Dose
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">(MTD), but need not exceed the Limit Dose (1000 mg/kg/day); however, typically,
+				the Agency also considers the toxicity profile of the chemical
+				(i.e., cholinesterase inhibition, target organ toxicity, etc.) in dose selection.
+				The second dose level should typically be spaced to produce a lesser degree of
+				toxicity relative to the high dose unless justification is provided for testing at a different level.
+				Example text is provided in the field.
+			</td>
+		</tr>  -->
+	</table>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

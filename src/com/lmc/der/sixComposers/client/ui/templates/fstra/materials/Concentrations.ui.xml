@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"	
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel width="155ex">
+		<div style="font-weight:bold">
+			Table 8: Summary of Test Concentrations in the Fish Short-Term Reproduction Assay with [test chemical].
+		</div>
+		<table>
+		<col style="width:80%"/><col style="width:20%"/>
+		<tr>
+		<td>
+			<tbl_ama:AMA2Table8/>
+		</td>
+		<td style="font-style:italic">
+			Guideline Recommendations:
+			EPA and OECD recommend that test item concentrations be
+			maintained at a coefficient of variation (CV) &le;20%. 
+		</td>
+		</tr></table>
+		<table>
+		<tr>
+			<td>
+				<g:Button btnName='TBL8_ADD'>
+					Add Test concentration					
+				</g:Button>
+			</td>
+			<td>
+				<g:Button btnName='TBL8_REM'>
+					Remove Test concentration
+				</g:Button>
+			</td>
+			<td>
+				Abbreviations: 						
+				<sup>CV</sup> Coefficient of variation.
+			</td>						 
+		</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					E. Observations
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Biological Endpoints:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>Observations>>BiologicalEndpoints>>Html"  addStyleNames='bigRTA' ui:field='rtaBE'>
+						<p style="color:firebrick">
+								[List the parameters measured, including the specific clinical signs/sublethal effects that were considered.  Include the measurement interval for each observation (e.g., daily, day 7 and 21, day 21, other).]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Were raw (individual) data provided?  
+				</td>
+				<td>
+					<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>Observations>>IndividualDataProvided" ui:field='lbRD'/>
+				</td>
+			</tr>
+			<tr style="font-style:italic">
+				<td colspan="2">
+					EPA recommends that observations of survival, fecundity, fertilization success, secondary sex characteristics, and other clinical signs occur at least daily. 
+					At test termination (day 21), additional observations include body weight and length, nuptial tubercle score, gonadal staging and histopathology, plasma vitellogenin, and plasma sex steroids (testosterone and 17&beta;-estradiol, if measured). 
+					Gonado-somatic index (GSI) is calculated using a ratio of gonad weight to body weight (gonad weight to the nearest 0.1 mg / body weight in mg x 100) at test termination.
+					<br/><br/>
+					Clinical signs of overt toxicity may include (but are not limited to) hemorrhage, cessation of feeding, and other abnormal behavior.					
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

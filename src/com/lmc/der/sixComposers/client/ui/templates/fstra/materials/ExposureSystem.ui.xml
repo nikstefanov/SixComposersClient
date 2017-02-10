@@ -1,0 +1,277 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>		
+	</ui:style>
+	<g:HTMLPanel width="147ex">
+		<table class="double_bordered" id="table4">
+			 <caption>
+			 	<b>Table 4: Summary of Information on the Exposure System and Test Vessel Characteristics.</b>
+			 </caption>			
+			 <col class="rightBorder" style="width:25ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+			 	<tr class="visible_row">
+			 		<td>					
+						Type of exposure:
+					</td>
+					<td>
+				 		<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfExposure>>Values>>Html" suggboxName='EXPOSURE'/><br/>
+				 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfExposure>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr1'>
+				 			<p style="color:FireBrick">
+				 				[Provide details if a different exposure system was used.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends the use of a flow-through system.  As noted in the Corrections and Clarifications document<sup>1</sup>, the use of a static renewal system is not recommended for this assay.
+					</td>						
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Type of flow-through dilution system:
+					</td>
+					<td>
+				 		<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfFlowThroughDilutionSystem>>Values>>Html" suggboxName='DILUTION_SYSTEM'/><br/>
+				 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TypeOfFlowThroughDilutionSystem>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr2'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						Intermittent flow proportional diluters or continuous flow serial diluters are recommended.<sup>2</sup>
+					</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Flow-through rate:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>FlowThroughRate>>Values>>Html" visibleLength='8' ui:field='t4v3'/>&nbsp;
+				 		mL/min
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>FlowThroughRate>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr3'/>
+				 	</td>
+					<td style="font-style:italic;">
+						Recommended flow-through rate is 45 mL/min (2.7 L/hr), or at least 6 total volume exchanges per day.
+					</td>
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Details on toxicant mixing for flow-through systems:
+					</td>
+					<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>ToxicantMixing>>Values>>Html" width='40ex' height='24ex' ui:field='t4v4'/>				 			
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>ToxicantMixing>>Details>>Html" width='40ex' height='24ex' ui:field='t4dr4'>
+				 			<p style="color:FireBrick">
+				 				[Briefly summarize any relevant information about toxicant mixing, flow-splitting accuracy, and the performance of the flow-through system.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td style="font-style:italic;">
+						Recommended toxicant mixing for flow-through systems: 1) Mixing chamber is recommended but not required; 2) Aeration is not recommended for mixing;3) A demonstration that the test solution is completely mixed before introduced into the test system is recommended; 4) The recommended flow splitting accuracy is within 10%.
+					</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Aeration:
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>Aeration>>Values>>Html" ui:field='t4v5'/>				 	
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>Aeration>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr5'/>
+				 	</td>
+					<td style="font-style:italic;">
+						EPA recommends aeration if dissolved oxygen reaches &le;4.9 mg/L (&le; 60% saturation).
+					</td>
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Source of dilution water:
+					</td>
+					<td>
+						<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>SourceOfDilutionWater>>Values>>Html" suggboxName='SOURCE'/><br/>
+						<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>SourceOfDilutionWater>>Details>>Html" width='40ex' height='21ex' ui:field='t4dr6'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends natural or reconstituted water; it is recommended that natural water be sterilized with UV and tested for pesticides, heavy metals, and other possible contaminants. OECD accepts any water in which the test species show control survival at least as good as indicated in the test guideline.
+					</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Was dilution water analyzed for pesticides, heavy metals and other contaminants?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>WasDilutionWaterAnalyzed>>Values>>Html" ui:field='t4v7'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>WasDilutionWaterAnalyzed>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr7'/>
+				 	</td>
+					<td>
+					</td>
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Test vessel type/materials:
+					</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselType>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v8'/>				 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselType>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr8'/>
+				 	</td>
+					<td style="font-style:italic;">
+						EPA and OECD recommend that water-contact portions of the system not compro- mise the study (e.g., all glass vessels or glass vessels with stainless steel frames are acceptable examples).
+					</td>
+				</tr>
+				<tr class="visible_row">
+			 		<td>					
+						Test vessel size:
+					</td>
+					<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselSize>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v9'>
+				 			<p style="color:FireBrick">
+				 				[report dimensions and/or total volume, specify units]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>	
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>TestVesselSize>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr9'/>
+				 	</td>
+				 	<td style="font-style:italic">
+				 		EPA recommends the use of 18 L test chambers (e.g., 40 x 20 x 20 cm).
+				 	</td>						
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Fill volume:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>FillVolume>>Values>>Html" visibleLength='8' ui:field='t4v10'/>&nbsp;
+				 		L
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>FillVolume>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr10'/>
+				 	</td>
+				 	<td style="font-style:italic">
+				 		EPA recommends 10 L solution per tank.
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Spawning substrate material:
+					</td>
+				 	<td>
+				 		<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>SpawningSubstrateMaterial>>Values>>Html" suggboxName='SUB_MAT'/><br/>
+				 		<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>				 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>SpawningSubstrateMaterial>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr11'/>
+				 	</td>
+					<td rowspan="2" style="font-style:italic">
+						EPA recommends that each tank contain three semi-circular spawning substrates, e.g., aged PVC pipe, 10 - 20 cm in length, split lengthwise.
+					</td>	
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Spawning substrate size:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>SpawningSubstrateSize>>Values>>Html" visibleLength='8' ui:field='t4v12'/>&nbsp;cm
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>SpawningSubstrateSize>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr12'/>
+				 	</td>					
+				 </tr>
+				 <tr class="visible_row">
+			 		<td>					
+						Additional details on exposure system:
+					</td>
+					<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>AdditionalDetailsT4>>Values>>Html" addStyleNames='smallRTA' ui:field='t4v13'/>
+				 				
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table4>>AdditionalDetailsT4>>Details>>Html" addStyleNames='smallRTA' ui:field='t4dr13'>
+				 			<p style="color:FireBrick">
+				 				[Briefly summarize other relevant details regarding the test system as they relate to guideline recommendations.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td>
+				 	</td>						
+				</tr>
+			</tbody>
+		</table>
+		Abbreviations:
+		<sup>1</sup> U.S. Environmental Protection Agency (EPA).  (2011).  Corrections and Clarifications on Technical Aspects of the Test Guidelines for the Endocrine Disruptor Screening Program Tier 1 Assays (OCSPP Test Guideline Series 890).
+		March 3, 2011.  Office of Chemical Safety and Pollution Prevention (OCSPP), Washington, D.C.
+		(<a href="http://www.epa.gov/endo/pubs/assayvalidation/clarificationdoc.pdf">http://www.epa.gov/endo/pubs/assayvalidation/clarificationdoc.pdf</a>).
+		<sup>2</sup> Additional guidance for aquatic test design is located in OCSPP Guideline 850.1000, Special Considerations for Conducting Aquatic Laboratory Studies.
+		
+		<br/><br/>		
+		<div>
+			<b>Table 5: Summary of Water Quality Characteristics in the Test System.</b>
+		</div>
+		<tblfs:FSTRATable5/>
+		<div>
+			Abbreviations: NA  Not applicable.
+		</div>
+		<div>
+			General recommendations for frequency of measurements:
+			EPA recommends that temperature, pH, and dissolved oxygen be measured in all test tanks at least weekly and
+			that hardness and alkalinity be measured in controls and in one tank at the highest test concentration at least weekly.
+			In addition, continuous temperature monitoring of at least one tank is encouraged.
+		</div>
+		<g:Button btnName='TBL5_ADD'/><g:Button btnName='TBL5_REM'/>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>ExposureSystem>>Table5Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td> 
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

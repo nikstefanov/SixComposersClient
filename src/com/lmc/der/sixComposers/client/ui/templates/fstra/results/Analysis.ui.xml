@@ -1,0 +1,111 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	>
+	<ui:style>		
+	</ui:style>		
+	<g:HTMLPanel width='110ex'>
+		<table>
+			<tr>
+				<td	style="font-weight:bold">
+					Study Author's<br/>Analysis
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>Analysis>>SAAnalysis>>Html" width='94ex' ui:field='SAAnalysis'>
+						<p style="color:firebrick">		
+							[List the parameters that were analyzed and the statistical tests that were performed by the study author.
+							Indicate whether the statistical analyses were appropriate and whether they were consistent with the methods recommended in the guideline.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td	style="font-weight:bold">
+					Study Author's<br/>Conclusions
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>Analysis>>SAConclusions>>Html" width='94ex' ui:field='SAConclusions'>
+						<p style="color:firebrick">
+							[Briefly summarize the study author???s conclusions.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td	style="font-weight:bold">
+					Reviewer's<br/>Analysis
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>Analysis>>RAnalysis>>Html" width='94ex' ui:field='RAnalysis'>
+						<p style="color:firebrick">		
+							[It is recommended that the reviewer confirm the accuracy of the statistical analyses by recalculating both summary statistics and pertinent statistical tests for each endpoint,
+							as well as performing the tests including and excluding any outliers, as appropriate.
+							Include percent differences from the negative control for each endpoint and the criteria for determining significance.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td	style="font-weight:bold">
+					Statistical<br/>Methods
+				</td>
+				<td colspan='2'>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>Analysis>>SMethods>>Html"  width='94ex' ui:field='StatMethods'>
+<p>
+	<span style="color:firebrick;font-style:italic">[Modify as appropriate.]</span>
+	The reviewer analyzed data for survival (mortality) using Fisher???s Exact Test
+	<span style="color:firebrick">[ToxStat 3.5 or CETIS v.xx]</span>
+	. Data for fecundity, normalized to the number of female reproductive days; fertility;
+	gondo-somatic index (GSI), vitellogenin (VTG); sex steroids (if measured); weight; and length (respectively), ... 
+</p>
+<ul style="list-style-position:inside">
+	<span style="color:firebrick">[Choose the appropriate option below]</span>
+	<li>
+		<span style="color:firebrick">were</span>
+		consistent with a monotonic concentration-response and therefore were analyzed using the Jonckheere-Terpstra test
+		<span style="color:firebrick">[SAS v.xx or CETIS v.xx]</span>
+		.
+	</li>
+	<li>
+		<span style="color:firebrick">were not</span>
+		consistent with a monotonic concentration-response.
+		The data were tested for normality using Shapiro-Wilks test and for homogeneity of variance using Levene???s test
+		<span style="color:firebrick">[ToxStat 3.5 or CETIS].</span>
+		Data
+		<span style="color:firebrick">[spacify]</span>
+		that met the assumptions of normality and homogeneity of variance were then analyzed using Dunnett???s test 
+		<span style="color:firebrick">[ToxStat 3.5 or CETIS].</span>
+		Data
+		<span style="color:firebrick">[spacify]</span>
+		that failed either of these assumptions
+		<span style="color:firebrick">[spacify]</span>
+		were analyzed using the Mann-Whitney test with the Bonferroni-Holm adjustment
+		<span style="color:firebrick">[ToxStat 3.5 or CETIS].</span>
+	</li>
+</ul>
+<p>
+	Replicate median values for nuptial tubercle score were analyzed using the Jonckheere-Terpstra test
+	<span style="color:firebrick">[SAS v.xx or CETIS v.xx].</span>
+	Unless otherwise indicated, effects were considered statistically significant at
+	<span style="color:firebrick">[p&lt;0.05].  [Describe any summary statistics presented for gonadal staging and histopathology.]</span>
+</p>
+						
+					</w:DERRichTextAreaPUT>
+				</td>				
+			</tr>
+			<tr>
+				<td	style="font-weight:bold">
+					Reviewer's<br/>Conclusions
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>Analysis>>RConclusions>>Html" width='94ex' ui:field='RConcl'>
+						<p style="color:firebrick">			
+							[Briefly summarize the study findings and complete the following tables.]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

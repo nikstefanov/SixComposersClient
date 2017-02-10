@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel ><!-- width='110ex' -->
+		<div style="width:70ex">Complete the following tables (15 - 18), specifying values for each severity grade listed. For example,
+		if 8 control fish were examined for testis-ova and no testis-ova were observed, the incidence value for severity grade 0 (not remarkable) in the control would be 8,
+		and the incidence values for severity grades 1-4 in the control would be 0.
+		</div>
+		<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>MaleHistopatology>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+					<p style="color:FireBrick">
+						[Discuss the incidence of gonadal histopathology observations in male and female fish, respectively.
+						Summarize qualitative (narrative) observations not included in the tables below, if provided.
+						Identify any apparent treatment-related effects. Report whether the severity grades were assigned based on
+						comparison to the negative control or based on comparison to normal histology as determined by the pathologist's experience.]
+					</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 15: Gonadal Histopathology in Male [test organism].
+		</div>
+		<tblfs:FSTRATable15/>
+		<div>
+			Abbreviations:
+			<sup>1</sup> Gonadal histopathology diagnostic observations are graded 0 - 4 based on severity: 0= Not remarkable, 1= Minimal, 2= Mild, 3= Moderate, 4= Severe.
+			See Appendix E of the test guideline for reference.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>MaleHistopatology>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

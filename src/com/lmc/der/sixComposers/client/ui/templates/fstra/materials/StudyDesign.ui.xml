@@ -1,0 +1,557 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>		
+	</ui:style>
+	<g:HTMLPanel width="160ex">
+		<table class="double_bordered" id="table6">
+			 <caption>
+			 	<b>Table 6: Range-Finding Study Conditions (if Applicable).</b>
+			 </caption>			
+			 <col class="rightBorder" style="width:30ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Was a range-finder conducted?
+			 		</td>
+			 		<td>
+			 			<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>RangeFinderConducted>>Values>>Html" ui:field='t6v1'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>RangeFinderConducted>>Details>>Html" addStyleNames='smallRTA' ui:field='t6dr1'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends conducting a range-finder if 96-hour LC<sub>50</sub> data for the fathead minnow are unavailable.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			If yes, what was the method for determining the highest test concentration in the range-finder?
+			 		</td>			 		
+			 		<td>
+			 			<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>DeterminingTheHighestTestConcentration>>Values>>Html" suggboxName='HTC_METHOD'/><br/>
+			 			<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+			 		</td>			 		
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>DeterminingTheHighestTestConcentration>>Details>>Html" addStyleNames='smallRTA' ui:field='t6dr2'/>
+			 		</td>			 		
+			 		<td style="font-style:italic;">
+						EPA recommends that the highest test concentration be selected based on toxicity data for other fish studies or species, if available.
+						Otherwise, either the solubility limit of the test compound or 100 mg/L (whichever is lower) is appropriate.
+					</td>			 	
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Species:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>Species>>Values>>Html" ui:field='t6v3'>
+			 				[scientific name]
+			 			</w:DERTextBoxLength>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>Species>>Details>>Html" addStyleNames='smallRTA' ui:field='t6dr3'/>
+			 		</td>
+			 		<td>
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Life stage:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>LifeStage>>Values>>Html" ui:field='t6v4'/>			 				
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>LifeStage>>Details>>Html" addStyleNames='smallRTA' ui:field='t6dr4'/>
+			 		</td>
+			 		<td style="font-style:italic">
+			 			EPA recommends that range-finding tests be performed with fish of similar age and size to those that would be utilized in the test.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Test duration:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>TestDurationT6>>Values>>Html" visibleLength='8' ui:field='t6v5'/>&nbsp;
+			 			days			 				
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>TestDurationT6>>Details>>Html" addStyleNames='smallRTA' ui:field='t6dr5'/>
+			 		</td>
+			 		<td style="font-style:italic">
+			 			EPA recommends a 96-hour exposure.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Additional details:
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>AdditionalDetailsT6>>Values>>Html" width='40ex' height='34ex' ui:field='t6v6'/>		 				
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table6>>AdditionalDetailsT6>>Details>>Html" width='40ex' height='34ex' ui:field='t6dr6'>
+			 				<p style="color:FireBrick">
+			 					[Briefly outline the range-finding test concentrations and other relevant conditions.
+			 					Indicate the results, e.g., NOEC, LOEC, LC<sub>50</sub> values if obtained, and note any relevant clinical observations.]
+			 				</p>
+			 			</w:DERRichTextAreaPUT>
+			 		</td>
+			 		<td style="font-style:italic">
+			 			EPA recommends conducting a range-finder with five test concentrations plus a control (six total treatment levels),
+			 			with four females and two males per exposure tank (36 fish total).
+			 			The number of mortalities that occur may be used to develop a concentration-response curve.  
+						Based upon the results, the highest concentration that does not result in increased mortality or signs of overt morbidity compared to controls,
+						or 1/3 the derived 96-hr LC<sub>50</sub>, may be selected as the highest exposure concentration in the 21-day test.
+			 			
+			 		</td>
+			 	</tr>			 				 	
+			 </tbody>
+		</table>
+		
+		<br/>
+		<table class="double_bordered" id="table7">
+			 <caption>
+			 	<b>Table 7: Definitive Study Conditions.</b>
+			 </caption>			
+			<col class="rightBorder" style="width:30ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Test duration:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>TestDurationT7>>Values>>Html" visibleLength='8' ui:field='t7v1'/>&nbsp;
+			 			days
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>TestDurationT7>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr1'/>
+			 		</td>
+			 		<td style="font-style:italic">
+			 			EPA recommends that the duration of the definitive test be 21 days.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Method for selecting the highest test concentration in the definitive test:
+			 		</td>
+			 		<td>
+			 			<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>MethodForHighestTestConcentration>>Values>>Html" suggboxName='HTC_METHOD'/><br/>
+			 			<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>MethodForHighestTestConcentration>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr2'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends that the highest test concentration is either the solubility limit of the test compound, 100 mg/L, or demonstrates adequate evidence of toxicity (e.g., 1/3 the 96-hour LC<sub>50</sub>), whichever concentration is lowest.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Reference study citation (if applicable):
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReferenceStudyCitation>>Values>>Html" addStyleNames='smallRTA' ui:field='t7v3'>
+			 				<p style="color:FireBrick">
+			 					[MRID, if available, and additional citation information]
+			 				</p>
+			 			</w:DERRichTextAreaPUT>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReferenceStudyCitation>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr3'/>
+			 		</td>
+			 		<td style="font-style:italic">			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Separation of test concentrations:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>SeparationOfTestConcentrations>>Values>>Html" ui:field='t7v4'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>SeparationOfTestConcentrations>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr4'/>
+			 		</td>
+			 		<td style="font-style:italic">
+			 			EPA suggests that a concentration separation of between 0.33 (or three-fold) and 0.1 (or ten-fold) is scientifically acceptable<sup>1</sup>.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Number of test concentrations:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>NumberOfTestConcentrations>>Values>>Html" ui:field='t7v5'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>NumberOfTestConcentrations>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr5'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends a minimum of 3 concentrations and a control, plus solvent control if appropriate.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Are nominal concentrations adjusted for purity?
+			 		</td>
+			 		<td>
+			 			<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>AdjustedForPurity>>Values>>Html" ui:field='t7v6'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>AdjustedForPurity>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr6'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			
+			 		</td>
+			 	</tr>
+				<tr class="visible_row">
+			 		<td>
+			 			Indicate the type of values presented for measured concentrations:
+			 		</td>
+			 		<td>
+			 			<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>TypeOfValuesMeasuredConcentrations>>Values>>Html" suggboxName='CONC'/><br/>
+			 			<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>TypeOfValuesMeasuredConcentrations>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr7'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Limit of quantification (LOQ):
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>LimitOfQuantification>>Values>>Html" visibleLength='8' ui:field='t7v8'/>&nbsp;
+			 			mg a.i./L
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>LimitOfQuantification>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr8'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends that for chemical test concentrations below the LOQ, analyses be conducted on the stock solutions.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Level of detection (LOD):
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>LevelOfDetection>>Values>>Html" visibleLength='8' ui:field='t7v9'/>&nbsp;
+			 			mg a.i./L
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>LevelOfDetection>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr9'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Frequency of measurement:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>FrequencyOfMeasurement>>Values>>Html" visibleLength='8' ui:field='t7v10'/>&nbsp;
+			 			days
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>FrequencyOfMeasurement>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr10'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			It is recommended that test item concentration be measured prior to the addition of fish in all tanks and at least weekly thereafter in two replicates per treatment level.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Was the randomized complete block design used?
+			 		</td>
+			 		<td>
+			 			<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>RandomizedCompleteBlock>>Values>>Html" ui:field='t7v11'/>			 			
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>RandomizedCompleteBlock>>Details>>Html" width='40ex' height='21ex' ui:field='t7dr11'>
+							<p style="color:FireBrick">
+			 					[Provide details if the test design differed from guideline recommendations.]
+			 				</p>			 			
+			 			</w:DERRichTextAreaPUT>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends that all fish be randomly assigned to tanks during pre-exposure.
+			 			Tanks are then ranked according to pre-exposure fecundity, and the tanks with the highest fecundity are randomly assigned to a definitive test treatment and block first.
+			 			Each block contains one replicate of each treatment, including controls.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Number of replicates in control:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReplicatesInControl>>Values>>Html" ui:field='t7v12'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReplicatesInControl>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr12'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends 4 replicates.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Number of replicates in solvent control (if applicable):
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReplicatesInSolventControl>>Values>>Html" ui:field='t7v13'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReplicatesInSolventControl>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr13'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends the use of a concurrent solvent control when a solubilizing agent is used.
+			 			EPA recommends 4 replicates.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Number of replicates per test item treatment level:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReplicatesPerTestItemTreatmentLevel>>Values>>Html" ui:field='t7v14'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>ReplicatesPerTestItemTreatmentLevel>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr14'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends 4 replicates.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Number of male fish per replicate at test initiation:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>MaleFishPerReplicate>>Values>>Html" ui:field='t7v15'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>MaleFishPerReplicate>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr15'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends 2 males per replicate.	
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Number of female fish per replicate at test initiation:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>FemaleFishPerReplicate>>Values>>Html" ui:field='t7v16'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>FemaleFishPerReplicate>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr16'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends 4 females per replicate.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Was a solvent used?
+			 		</td>
+			 		<td>
+			 			<w:DERListBoxYesNo name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>WasSolventUsed>>Values>>Html" ui:field='t7v17'/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>WasSolventUsed>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr17'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Solvent type (if applicable):
+			 		</td>
+			 		<td>
+			 			<w:DERAutoSuggestBox name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>SolventType>>Values>>Html" suggboxName='SOLVENT'/><br/>
+			 			<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>SolventType>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr18'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Maximum solvent concentration (if applicable):
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>MaximumSolventConcentration>>Values>>Html" visibleLength='8' ui:field='t7v19'/>&nbsp;
+			 			mL/L
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>MaximumSolventConcentration>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr19'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends that the solvent not exceed 0.02 ml/L<sup>3</sup>. OECD recommends
+			 			that solvent have no effect on survival nor produce any other adverse effects and that concentration not be greater than 0.1 ml/L<sup>4</sup>.
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Was a positive control used?
+			 		</td>
+			 		<td>
+			 			<w:DERListBoxYesNoReferenced name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>WasPositiveControlUsed>>Values>>Html" ui:field='t7v20'
+						 widgetDefaultValue="No"/>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>WasPositiveControlUsed>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr20'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Positive control (if applicable):
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>PositiveControlT7>>Values>>Html" ui:field='t7v21'>
+			 				[name of chemical]
+			 			</w:DERTextBoxLength>
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>PositiveControlT7>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr21'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Positive control concentration(s) (if applicable):
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>PositiveControlConcentration>>Values>>Html" visibleLength='8' ui:field='t7v22'/>&nbsp;
+			 			mg a.i./L
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>PositiveControlConcentration>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr22'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Photoperiod:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>Photoperiod>>Values>>Html" visibleLength='8' ui:field='t7v23'>
+			 				light:dark
+			 			</w:DERTextBoxLength>&nbsp;hrs
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>Photoperiod>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr23'/>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 			EPA recommends photoperiod 16:8 (light:dark).
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Light intensity at water's surface:
+			 		</td>
+			 		<td>
+			 			<w:DERTextBoxLength name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>LightIntensityAtWaterSurface>>Values>>Html" visibleLength='8' ui:field='t7v24'/>&nbsp;
+			 			lux
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>LightIntensityAtWaterSurface>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr24'/>
+			 		</td>
+			 		<td style="font-style:italic">
+			 			EPA recommends light intensity 540 ??? 1080 lux (at water's surface).
+			 		</td>
+			 	</tr>
+			 	<tr class="visible_row">
+			 		<td>
+			 			Additional details:
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>AdditionalDetailsT7>>Values>>Html" addStyleNames='smallRTA' ui:field='t7v25'/>			 				
+			 		</td>
+			 		<td>
+			 			<w:DERRichTextAreaPUT name="FSTRA||MaterialsAndMethods>>StudyDesign>>Table7>>AdditionalDetailsT7>>Details>>Html" addStyleNames='smallRTA' ui:field='t7dr25'>
+			 				<p style="color:FireBrick">
+			 					[Briefly summarize other relevant details regarding the study conditions for the definitive test, as they relate to guideline recommendations.]
+			 				</p>
+			 			</w:DERRichTextAreaPUT>
+			 		</td>
+			 		<td style="font-style:italic;">
+			 		
+			 		</td>
+			 	</tr>			 	
+			 </tbody>
+		</table>
+		Abbreviations:
+		<sup>3</sup> Hutchinson TH, Shillabeer N, Winter MJ, Pickford DB (2006). Acute and chronic effects of carrier solvents in aquatic organisms: A critical review.
+		Review. Aquatic Toxicology, 76, pp.69???92.
+		<sup>4</sup> OECD (2000). Guidance Document on Aquatic Toxicity Testing of Difficult Substances and Mixtures. Environmental Health and Safety Publications. Series on Testing and Assessment. No. 23. Paris, France.
+	</g:HTMLPanel>
+</ui:UiBinder> 

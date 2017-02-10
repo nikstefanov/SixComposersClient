@@ -1,0 +1,131 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_hersh="urn:import:com.lmc.der.sixComposers.client.widgets.tables.hersh"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel width="105ex">
+		<table>
+		    <col/><col/><col/>
+		    <tr>
+		       <td>Dose Selection Rationale</td>
+				<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>DoseSelectionRationale>>Html">
+				    <p>The dose levels were selected based on the results from a range-finding
+				    study <span style="color:firebrick">(MRID [#])</span> in which six ovariectomized female
+				    rats/dose group received the test substance in corn oil via
+				    gavage at doses of 0, 100, 300, or 1000 mg/kg/day for three consecutive days.
+				    At 300 and 1000 mg/kg/day, wet and blotted uterine weights were significantly
+				    (p&lt;0.05) increased over vehicle controls, therefore doses of lower than 300 mg/kg/day
+				    were used for the main study.</p>
+				 </w:DERRichTextAreaPUT></td>
+				 <td>Briefly describe any range-finding study, including information regarding the study
+				 identification (laboratory report or MRID number), study type (i.e., duration, route of
+				 administration, number of animals, species), dose levels, effects, and conclusions.
+				 The Test Guideline recommends that the highest dose level not exceed the limit dose of 1000 mg/kg/day.
+				  </td>  
+		    </tr>
+		    <tr>
+		        <td>Dose Preparation</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>DosePrepAndAnalysis>>Html">
+		                <p>Dose formulations were prepared
+		                <span style="color:firebrick">[daily OR once prior to initiation of treatment]</span>
+		                by initially dissolving the appropriate amounts of test substance in
+		                (type of vehicle/solvent).
+		                The test substance was then mixed with
+		                <span style="color:firebrick">[type of vehicle]</span> for dosing.
+		                Doses were adjusted daily based on individual body weight measurements.
+		                Homogeneity and stability were tested at
+		                <span style="color:firebrick">(when, what dose levels, duration, and temperature)</span>. 
+		                During the study, samples of dose formulations were analyzed
+		                <span style="color:firebrick">(when and at what dose levels)</span> for achieved concentration.</p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		        <td>Information on dose formulations should include:
+		         method and frequency of preparation
+		         (i.e., for each dose formulation OR via serial dilution, etc.);
+		         storage conditions (i.e., duration and temperature);
+		         and dose analysis for homogeneity (sampling method);
+		         stability (storage temperature and duration), and achieved concentration
+		         (dose levels and when analyzed).
+		        </td>  
+		    </tr>
+		   <tr>
+				<td style="text-decoration:underline" colspan="3">Results of Dose Analysis
+				</td>
+			</tr>
+			<tr>
+				<td>Homogeneity:</td>
+				<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Homogeneity>>Html" addStyleNames='smallRTA'/></td>
+				<td>Concentration range as percent of nominal and/or coefficient of variation for different strata (e.g., top, middle, and bottom).</td>
+			</tr>
+			<tr>
+				<td>Stability:</td>
+				<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Stability>>Html" addStyleNames='smallRTA'/></td>
+				<td>Range of values for each temperature and duration tested, expressed as percent of initial (preferable) or percent of nominal concentration.</td>
+			</tr>
+			<tr>
+				<td>Concentration:</td>
+				<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Concentration>>Html" addStyleNames='smallRTA'/></td>
+				<td>Range of values expressed as percent of nominal.</td>
+			</tr>
+		    <tr>
+				<td colspan="3">The analytical data indicated that the mixing procedure 
+				<w:DERListBoxSC name="UA||MaterialsAndMethods>>ResultOfDoseAnalysis>>AdequateProcedure"><g:item>was</g:item><g:item>was not</g:item></w:DERListBoxSC>
+				adequate. 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">And that the variation between nominal and actual dosage to the animals
+				<w:DERListBoxSC name="UA||MaterialsAndMethods>>ResultOfDoseAnalysis>>AcceptableVariation"><g:item>was</g:item><g:item>was not</g:item></w:DERListBoxSC>
+				acceptable.
+				</td>
+			</tr>
+			<tr>
+				<td>Describe any deficiencies noted.</td>
+				<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Deficiencies>>Html" addStyleNames='smallRTA'/></td>				
+			</tr>
+		   <tr>
+				<td>Dosage Administration</td>
+				<td>
+					<w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>DosageAdministration>>Html">
+					    <p>Animals were administered the test formulations and/or EE or vehicle daily via s.c.
+					    injection for three consecutive days in a dose volume of 5 mL/kg body weight.
+					    Dose volumes were adjusted daily based on the concurrent body weight measurement.
+					    </p>
+					</w:DERRichTextAreaPUT>
+				</td>
+				<td>
+				    Summarize dose administration information regarding the test formulations and EE
+				    including the route of administration (sc injection preferred, but oral gavage acceptable),
+				    dose schedule, and dose volume.  The Test Guideline recommends that doses be administered
+				    in a volume of &le;5 mL/kg, unless aqueous solutions were used,
+				    in which case the Guideline recommends volumes up to 10 mL/kg body weight.				    				   
+				</td>
+		    </tr>
+		    <tr>
+			    <td colspan='3'>The Guideline recommends dosing immature female rats for three consecutive days.
+			    A three-day exposure is also recommended for ovariectomized female rats,
+			    although a 7 day treatment period may be appropriate as it may improve detection of weakly active substances.
+			    If ovariectomized mice are used, a 7 day administration period is strongly recommended to detect any effects.
+			    Verify that animals were treated at the same time each day.
+			    </td>
+			</tr>
+		    <tr>
+				<td>Statistics:</td>
+				<td><w:DERRichTextAreaPUT name="UA||MaterialsAndMethods>>Statistics>>Html" /></td>
+				<td>
+				   	Describe the statistical methods used.  Include a statement as to whether or not the Reviewer considers the analyses used to be appropriate; if inappropriate, provide alternative/rationale. If inappropriate refer to the Guideline for the recommended statistical methods and perform the required analysis. Refer to the SEP for details.			   	
+				</td>
+			</tr>
+			<tr>
+			    <td colspan='3'>The criterion for statistical significance should be identified (e.g., p &le; 0.05) and groups attaining statistical significance should be denoted. In the DER tables, the asterisk (*) is used as a means of indicating statistical significance. Summary data tables, reporting mean, standard deviation and CV for uterine weights are included for each assay.
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder>

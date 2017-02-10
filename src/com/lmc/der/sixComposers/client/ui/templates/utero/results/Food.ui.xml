@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_utero="urn:import:com.lmc.der.sixComposers.client.widgets.tables.utero"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel width="144ex">
+		<table>
+		<tr>
+			<td>Food consumption</td>
+			<td>
+				<w:DERRichTextAreaPUT name="UA||ResultsAndDiscussion>>FoodConsumption>>Html">
+					
+				</w:DERRichTextAreaPUT>
+			</td>
+			<td>
+				If measured, include enough food consumption information to document any effects
+				observed, or as necessary to explain effects on body weight.
+			</td>
+		</tr>
+		</table>
+	
+		<div>&nbsp;</div>
+		<div style="text-align:center;font-weight:bold;">
+		    Table 6.  Food Consumption (g/kg bw/day) in the Estrogen Agonist Assay<sup>a</sup>
+		</div>
+		<tbl:FSTRA2FlexTableButtons2 TblName='TBL6' addStyleNames='centeredObj'
+			note="*  Significantly different from controls at p&lt;0.05. ** Significantly different from controls at p&lt;0.01."/>
+		<div style="text-align:center">Data were obtained from page 
+			<w:DERTextBoxLength name="UA||ResultsAndDiscussion>>RefTable6" visibleLength="2"/>
+		 	of the study report. N= No. of animals in the group.SD = Standard Deviation.<br/>
+		 	Note: At minimum report for first and last days and body weight gain for the overall study.
+		</div>
+	    
+	    <div>&nbsp;</div>
+		<div style="text-align:center;font-weight:bold;">
+		     Table 7.  Food Consumption (g/kg bw/day) in the Anti-Estrogenic Assay<sup>a</sup>
+		</div>
+		<tbl:FSTRA2FlexTableButtons2 TblName='TBL7' addStyleNames='centeredObj'
+			note="*  Significantly different from controls at p&lt;0.05. ** Significantly different from controls at p&lt;0.01."/>
+		<div style="text-align:center">Data were obtained from page 
+			<w:DERTextBoxLength name="UA||ResultsAndDiscussion>>RefTable7" visibleLength="2"/>
+		 	of the study report. N= No. of animals in the group.SD = Standard Deviation.<br/>
+		 	Note: At minimum report for first and last days and body weight gain for the overall study.
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

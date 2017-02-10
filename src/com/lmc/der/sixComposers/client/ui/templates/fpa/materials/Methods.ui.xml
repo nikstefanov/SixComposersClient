@@ -1,0 +1,210 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:style>		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	
+	<g:HTMLPanel width="90ex">
+	<table>
+	<col style="width:20ex"/><col style="width:70ex"/>
+	<tr>
+		<td>Mortality and Clinical Examinations:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}">
+				<p>All animals were examined <span style="color:firebrick">[frequency; e.g. twice daily]</span>
+				for mortality and moribundity.
+				Clinical examinations were conducted <span style="color:firebrick">[frequency]</span>.</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Body Weight:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'>
+			Animals were weighed daily prior to dosing.
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Food Consumption:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'>			
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td>Vaginal Opening:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'>
+			<p>Beginning on PND <span style="color:firebrick">[22]</span>,
+				 all animals were examined daily for onset of vaginal opening.
+				Age and weight at on the day of completion of vaginal opening were recorded.</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">The Test Guidelines recommend that the appearance of a small "pin hole",
+			a vaginal thread, and complete vaginal opening be recorded for all days they are observed.
+		</td>
+	</tr>
+	<tr>
+		<td>Estrous Cyclicity:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+			<p>Beginning on the day of vaginal opening, up to and including the day of necropsy,
+			daily vaginal smears were obtained and evaluated for the presence of leukocytes,
+			nucleated epithelial cells, or cornified epithelial cells.
+			The vaginal smears were classified as diestrus (predominance of leukocytes mixed with
+			some cornified epithelial cells), proestrus (predominance of clumps of round,
+			nucleated epithelial cells), or estrus (predominance of cornified epithelial cells).
+			The age at first vaginal estrus was recorded.</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">A typical cycle consists of two or three days of diestrus, one day of proestrus,
+		and one or two days of estrus. The study should normally include detailed information
+		on estrous cyclicity for all animals and summary information for the dose groups,
+		including (i) the mean age at first vaginal estrus, (ii) the mean cycle length
+		for each group, (iii) the percent of each group cycling, (iv) the percent of each group
+		cycling regularly, and (v) the stage of the cycle at the time of necropsy.
+		</td>
+	</tr>
+	<tr>
+		<td>Sacrifice and Pathology:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+			<p>On the day of termination, rats were removed one at a time from their home cages to a separate room
+			for euthanasia and terminal procedures so as not to induce stress-related
+			responses in other animals which may affect hormone measurements.
+			All surviving animals were sacrificed
+			<span style="color:firebrick;font-style:italic">(describe method)</span>		
+			on PND
+			<span style="color:firebrick">[42]</span>
+			approximately 2 hours post-dosing.			
+			Blood from the trunk of the animals was collected immediately
+			into serum separation tubes, processed <span style="color:firebrick">[method]</span>
+			, and stored at <span style="color:firebrick">[temperature]
+			<span style="font-style:italic">(should be -20&deg;C or colder)</span></span>
+			; for subsequent hormone and clinical chemistry evaluations.			
+			</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">Preferred method of sacrifice is by injectable anesthetic,
+			followed by immediate decapitation; carbon dioxide is not an acceptable anesthetic.
+			The guideline recommends sacrificesbe completed by 1300 hours
+			due to normal diurnal fluctuation in thyroid hormone levels.
+			Historical control data should be provided.
+		</td>
+	</tr>
+	<tr>
+		<td>Hormone Analysis:</td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" >
+			<p>Total thyroxine (T<sub>4</sub>), and thyroid stimulating hormone (TSH) levels were analyzed using
+			<span style="color:firebrick">[assay type; radioimmunoassay (RIA), immunoradiometric assay (IRMA),
+			enzyme-linked immunosorbent assay (ELISA), or time-resolved immunofluorescent procedures.]</span>
+			</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	</table>
+	<table>
+	<col style="width:20ex"/><col style="width:70ex"/>
+	<tr>
+		<td>Clinical Chemistry:</td>
+		<td>The following CHECKED (&radic;) parameters were examined.</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<table>
+		<tr>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="ELECTRO_TBL"/>
+				* Recommended<br/>based on guideline<br/>890.1450.
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="ENZYM_TBL"/>
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="OTR1_TBL"/>
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="EMPTY5x1_TBL"/>
+			</td>
+		</tr>		
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Organ Weights and Histopathology:</td>
+		<td>The following CHECKED (&radic;) tissues were collected and weighed.
+			The (&radic;&radic;) organs, in addition, were subjected to histological examination.
+			<span style="color:firebrick;font-style:italic">(Note if not all collected tissues were examined.)</span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<table>
+		<tr>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="URO_F_TBL"/>				
+			</td>			
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="OTR2_TBL"/>				
+			</td>
+			<td style="vertical-align:top">
+				<tbl_mpa:MPATableCheckBoxes TblName="EMPTY5x2_TBL"/>
+			</td>
+			<td style="vertical-align:top">
+				* Weights required based on<br/>guideline 890.1450<br/>
+				** Histopathological examination<br/>required based on guideline 890.1450
+			</td>
+		</tr>		
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='bigRTA'>
+			<p>All organs collected, except the thyroid/trachea and uterus were weighed prior to fixation.
+				Paired organs (kidneys, adrenals, and ovaries) were weighed together.
+				The uterus and cervix were separated from the vagina and weighed.
+				The uterus was weighed again following removal of the fluid in the lumen (blotted weight).
+			</p>
+			<p>
+			The ovaries
+			<span style="color:firebrick">[left or right]
+			<span style="font-style:italic">(should be from the same side of each animal; report any deviations)</span></span>
+			and uterus were fixed in 10% buffered formalin and stored in 70% ethanol prior to embedding.
+			The thyroid (with parathyroid) and kidneys were fixed in 10% buffered formalin for at least 24 hrs.
+			Following fixation, the thyroid was dissected from the trachea.
+			All collected tissues were routinely processed into paraffin blocks, sectioned,
+			stained with hematoxylin and eosin, and examined microscopically.
+			</p>
+			</w:DERRichTextAreaPUT>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		This is the information that you would be found in the study report conducted following
+		guideline recommendations. Thyroid sections are subjectively evaluated for follicular cell
+		height and colloid area, preferably using a five point grading scale (1 = shortest/smallest;
+		5 = tallest/largest), and any abnormalities/lesions noted.  At least two sections from each
+		of the two lobes of the thyroid should be examined in order to obtain representative sample
+		of the thyroid tissue from each lobe.  Note whether ovarian histology included evaluations
+		of any abnormalities/lesions (such as ovarian atrophy) and follicular development, including:
+		presence/absence of tertiary/antral follicles, presence/absence of corpora lutea, changes
+		in corpus luteum development, changes in number of both primary and atretic follicles.
+		Five random sections should be evaluated using the method of Smith et al. (1991).
+		Uterine histology should document cases of uterine hyper- or hypotrophy as characterized
+		by changes in uterine horn diameter and myometrial, stromal, or endometrial gland development.
+		The histological assessment should take into account the stage of the estrous cycle of the female
+		at the time of necropsy, as ovarian and uterine cellular changes are dependent upon endocrine status.
+		Report the histopathological findings in Section II.G. 
+		</td>
+	</tr>
+	</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

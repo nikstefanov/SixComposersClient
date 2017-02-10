@@ -1,0 +1,424 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>		
+	</ui:style>
+	<g:HTMLPanel width="165ex">
+		<table class="double_bordered" id="tabel2">
+			 <caption>
+			 	<b>Table 2: General Information About the Test Species and Parental Care.</b>
+			 </caption>			
+			<col class="rightBorder" style="width:30ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:53ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+			 <tr class="visible_row">
+			 	<td>
+			 		Species common name:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesCommonName>>Values>>Html" ui:field='t2v1'/>			 		
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesCommonName>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr1'/>			 		
+			 	</td>
+			 	<td rowspan="3" style="font-style:italic;">
+			 		EPA recommends African clawed frog (Xenopus laevis). Western [Africa] clawed frog Silurana (Xenopus) tropicalis may be used as an alternate species<sup>1</sup>; however, a list of all of the necessary protocol deviations to accommodate this species is recommended for inclusion in the study report.  The guideline recommends that the performance criteria used to support the reliability of the test be identified.			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Species scientific name:
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesScientificName>>Values>>Html" ui:field='t2v2'/>	
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesScientificName>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr2'/>
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Species strain (if stated):
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesStrain>>Values>>Html" ui:field='t2v3'/>	
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>SpeciesStrain>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr3'/>
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Were parents maintained as in-house stock?
+			 	</td>
+			 	<td>
+			 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>InHouseStock>>Values>>Html" ui:field='t2v4'/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>InHouseStock>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr4'>
+			 			<p style="color:FireBrick">
+			 				[Provide additional information about the source of animals, if available.]
+			 			</p>
+			 		</w:DERRichTextAreaPUT>
+			 	</td>
+			 	<td style="font-style:italic;">			 		
+			 			EPA recommends that larvae used in the assay be derived from in-house adults.			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Were parental acclimation conditions same as definitive test?
+			 	</td>
+			 	<td>
+			 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>DefinitiveTest>>Values>>Html" ui:field='t2v5'/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>DefinitiveTest>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr5'/>
+			 	</td>
+			 	<td>
+			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Acclimation period for parental frogs (if applicable):
+			 	</td>
+			 	<td>
+			 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>AcclimationPeriod>>Values>>Html" ui:field='t2v6'/>&nbsp;
+			 		days
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>AcclimationPeriod>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr6'/>
+			 	</td>
+			 	<td>
+			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Details on parental feeding:
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>ParentalFeeding>>Values>>Html" addStyleNames='smallRTA' ui:field='t2v7'/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>ParentalFeeding>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr7'>
+			 			<p style="color:FireBrick">
+			 				[What were the type, source, amount, and frequency of feeding for adult frogs?]
+			 			</p>
+			 		</w:DERRichTextAreaPUT>
+			 	</td>
+			 	<td>
+			 		
+			 	</td>
+			 </tr>
+			 <tr class="visible_row">
+			 	<td>
+			 		Details on parental health:
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>ParentalHealth>>Values>>Html" addStyleNames='smallRTA' ui:field='t2v8'/>
+			 	</td>
+			 	<td>
+			 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table2>>ParentalHealth>>Details>>Html" addStyleNames='smallRTA' ui:field='t2dr8'>
+			 			<p style="color:FireBrick">
+			 				[Describe the health of the parental stock: Were any behavioral
+			 				abnormalities, deformities, other clinical signs, or mortality observed? ]
+			 			</p>
+			 		</w:DERRichTextAreaPUT>
+			 	</td>
+			 	<td>
+			 		
+			 	</td>
+			 </tr>
+			 </tbody>
+		</table>
+		<div style="width:160ex">
+			Abbreviations:
+			<sup>1</sup> U.S. Environmental Protection Agency (EPA). (2011).
+			Corrections and Clarifications on Technical Aspects of the Test Guidelines for the Endocrine Disruptor Screening Program Tier 1 Assays (OCSPP Test Guideline Series 890). March 3, 2011. Office of Chemical Safety and Pollution Prevention (OCSPP), Washington, D.C. (
+			<a href="http://www.epa.gov/endo/pubs/assayvalidation/clarificationdoc.pdf">
+				http://www.epa.gov/endo/pubs/assayvalidation/clarificationdoc.pdf
+			</a>
+			).	
+		</div>
+		<br/>
+		<table class="double_bordered" id="tabel3">
+			 <caption>
+			 	<b>Table 3: Larval Selection and Care.</b>
+			 </caption>			
+			 <col class="rightBorder" style="width:30ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:40ex"/>
+			 <col class="rightBorder" style="width:53ex"/>
+			 <thead>
+				 <tr class="visible_row">
+				 	<th>
+				 		Parameter
+				 	</th>
+				 	<th>
+				 		Value(s)
+				 	</th>
+				 	<th>
+				 		Details or Remarks
+				 	</th>
+				 	<th>
+				 		Guideline Recommendations
+				 	</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+				 <tr class="visible_row">
+				 	<td>
+				 		Best single spawn?
+					</td>
+				 	<td>
+						<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>BestSingleSpawn>>Values>>Html"><g:item>Unknown</g:item></w:DERListBoxYesNo>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>BestSingleSpawn>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr1'/>
+				 	</td>
+					<td rowspan="3" style="font-style:italic;">
+						EPA and OECD recommend that the best 2 ??? 3 individual spawns, with a minimum of 1500 larvae/spawn, be evaluated to identify the best single spawn, and that the larvae selected for testing originate from the best single spawn (i.e., the spawns are not co-mixed)
+					</td>
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Number of spawns evaluated (if applicable):
+				 	</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfSpawnsEvaluated>>Values>>Html" ui:field='t3v2'/>			 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfSpawnsEvaluated>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr2'/>			 		
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Number of eggs sampled per spawn:
+				 	</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfEggsSampled>>Values>>Html" ui:field='t3v3'/>			 		
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>NumberOfEggsSampled>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr3'>
+				 			<p style="color:FireBrick">
+				 				[On which day(s) were eggs evaluated to check embryonic viability?]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>			 		
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		NF stage at test initiation
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>NFStageAtTestInitiation>>Values>>Html" ui:field='t3v4'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>NFStageAtTestInitiation>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr4'/>
+				 	</td>
+					<td rowspan="2" style="font-style:italic;">
+						EPA recommends that the definitive study be initiated with larvae at Nieuwkoop ??? Faber (NF) developmental stage 51 (&le;17 days post-fertilization).
+					</td>
+				</tr>
+				<tr class="visible_row">
+				 	<td>
+				 		Age at test initiation:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>AgeAtTestInitiation>>Values>>Html" ui:field='t3v5'/>&nbsp;
+				 		days post-fertilization (dpf)
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>AgeAtTestInitiation>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr5'/>
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Mean total length at test initiation (if reported):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanTotalLength>>Values>>Html" ui:field='t3v6'/>&nbsp;
+				 		mm
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>MeanTotalLength>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr6'/>
+				 	</td>
+				 	<td></td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Range of total length at test initiation (if reported):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>RangeOfTotalLength>>Values>>Html" ui:field='t3v7'>
+				 			from - to
+				 		</w:DERTextBoxLength>
+				 		&nbsp;mm
+				 		<!-- <br/>
+				 		<w:DERTextBoxLength name="Unknown" widgetDefaultValue="" ui:field='t3v71'/>
+				 		mm  -->
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>RangeOfTotalLength>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr7'/>
+				 	</td>
+				 	<td></td>
+				 </tr>
+				  <tr class="visible_row">
+				 	<td>
+				 		Was the optional size selection method used?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>OptionalSizeSelectionMethod>>Values>>Html" ui:field='t3v8'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>OptionalSizeSelectionMethod>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr8'/>
+				 	</td>
+				 	<td></td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Details on larval selection:
+					</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>DetailsOnLarvalSelection>>Values>>Html" addStyleNames='smallRTA' ui:field='t3v9'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>DetailsOnLarvalSelection>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr9'>
+				 			<p style="color:FireBrick">
+				 				[If the method used to select larvae for use in the definitive test was different from the guideline recommendations, briefly describe. How were larval number and viability assessed?]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>
+				 	</td>
+				 	<td></td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Loading rate (rearing density):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>LoadingRate>>Values>>Html" ui:field='t3v10'/>&nbsp;
+				 		larvae/L
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>LoadingRate>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr10'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends that rearing density (loading rate) not exceed approximately 10 larvae/L culturing system for flow-through systems or 4 tadpoles/L in static-renewal exposure systems.
+					</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Type of food:
+				 	</td>
+				 	<td>
+						<w:DERAutoSuggestBox name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>TypeOfFood>>Values>>Html" suggboxName='FOOD_TYPE'/><br/>
+						<span style="color:gray">
+			 				Typing comma pulls out the<br/>list menu again.
+			 			</span>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>TypeOfFood>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr11'>
+				 			<p style="color:FireBrick">
+				 				[If other, please describe.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>			 		
+				 	</td>
+				 	<td rowspan="3" style="font-style:italic;">
+						EPA recommends Sera Micron?? throughout pre-exposure (after NF stage 45/46) and during the entire 21-d definitive study. If another diet is used, the study report should provide analysis of iodide content and potential contaminants, and the diet should demonstrate equal performance to Sera Micron??.
+					</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Source of food:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>SourceOfFood>>Values>>Html" ui:field='t3v12'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>SourceOfFood>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr12'/>
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Iodide concentration in diet (if known):
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>IodideConcentration>>Values>>Html" ui:field='t3v13'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>IodideConcentration>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr13'/>
+				 	</td>
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Frequency of feeding:
+					</td>
+				 	<td>
+				 		<w:DERTextBoxLength name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>FrequencyOfFeeding>>Values>>Html" ui:field='t3v14'/>&nbsp;
+				 		times/day
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>FrequencyOfFeeding>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr14'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						EPA recommends that feeding occur at least twice per day.
+					</td>					
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Details on feeding regime:
+					</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>FeedingRegime>>Values>>Html" addStyleNames='smallRTA' ui:field='t3v15'>
+				 			<p style="color:FireBrick">
+				 				[Was the feeding regime the same as guideline recommendations? Provide details on any deviations and rationale.]
+				 			</p>
+				 		</w:DERRichTextAreaPUT>	
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>FeedingRegime>>Details>>Html" addStyleNames='smallRTA' ui:field='t3dr15'/>
+				 	</td>
+				 	<td style="font-style:italic;">
+						It is recommended that food rations during the pre-exposure period be increased along with larval growth to approximately 30 mg/larva/day by test initiation. EPA and OECD recommend that food rations increase from 30 mg/larva/day at test initiation (Study Day 0-4) to 80 mg/larva/day in the last week of the test (Study Day 15-21).
+					</td>					
+				 </tr>
+				 <tr class="visible_row">
+				 	<td>
+				 		Did Feeding Regime follow guideline recommendations?
+					</td>
+				 	<td>
+				 		<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>GuidelineRecommendationsFollowed>>Values>>Html" ui:field='t3vend'/>
+				 	</td>
+				 	<td>
+				 		<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>TestOrganism>>Table3>>GuidelineRecommendationsFollowed>>Details>>Html" addStyleNames='smallRTA' ui:field='t3drend'/>
+				 	</td>
+				 	<td></td>
+				 </tr>
+			 </tbody>
+			</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

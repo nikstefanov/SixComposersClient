@@ -1,0 +1,129 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_hersh="urn:import:com.lmc.der.sixComposers.client.widgets.tables.hersh"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel width="105ex">
+		<table>
+		    <col/><col/><col/>
+		    <tr>
+		       <td>Dose Selection Rationale</td>
+				<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>DoseSelectionRationale>>Html">
+				    <p>The dose levels were selected based on the results from a range-finding study
+				    (<span style="color:firebrick">MRID No.</span>) in which six castrated male rats/dose group were
+				    administered the test substance in corn oil via gavage at doses of 0, 100, 300, or 1000 mg/kg/day
+				    for 10 days.  At 300 mg/kg/day, weights of the ventral prostate, seminal vesicles,
+				    and LABC were significantly (p&lt;0.05) increased over vehicle controls.
+				    Additionally at 1000 mg/kg/day, glans penis weight was increased.  Based on these findings, doses lower
+				    than 300 mg/kg/day were used for the main study.</p>
+				 </w:DERRichTextAreaPUT></td>
+				 <td>Briefly describe any range-finding study, including information regarding the study
+				     identification (laboratory report or MRID number), study type (i.e., duration, route of
+				     administration, species), dose levels, effects, and conclusions.
+				     The highest dose level does not need to exceed the limit dose of 1000 mg/kg/day.
+				  </td>  
+		    </tr>
+		    <tr>
+		        <td>Dose Preparation</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>DosePreparation>>Html">
+		                <p>Dose formulations were prepared <span style="color:firebrick">[daily or prior to treatment]</span>
+		                by mixing appropriate amounts of test substance with <span style="color:firebrick">[type of vehicle/solvent]</span>.
+		                Doses were adjusted daily based on individual body weight measurements.
+		                Homogeneity and stability were tested at <span style="color:firebrick">[when, what dose levels, duration,
+		                and temperature]</span>.  During the study, samples of dose formulations were analyzed
+		                <span style="color:firebrick">[when and at what dose levels]</span> for achieved concentration.</p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		        <td>Information on dose formulations should include:
+		            method and frequency of preparation (i.e., for each dose formulation OR via serial dilution,
+		            etc.); storage conditions (i.e., duration and temperature); and dose analysis
+		            for homogeneity (sampling method); stability (storage temperature and duration)
+		            and achieved concentration (dose levels and when analyzed).
+		        </td>  
+		    </tr>
+		   <tr>
+				<td style="text-decoration:underline" colspan="3">Results of Dose Analysis
+				</td>
+			</tr>
+			<tr>
+				<td>Homogeneity:</td>
+				<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Homogeneity>>Html" addStyleNames='smallRTA'/></td>
+				<td>Concentration range as percent of nominal and/or coefficient of variation for different strata (e.g., top, middle, and bottom).</td>
+			</tr>
+			<tr>
+				<td>Stability:</td>
+				<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Stability>>Html" addStyleNames='smallRTA'/></td>
+				<td>Range of values for each temperature and duration tested, expressed as percent of initial (preferable) or percent of nominal concentration.</td>
+			</tr>
+			<tr>
+				<td>Concentration:</td>
+				<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Concentration>>Html" addStyleNames='smallRTA'/></td>
+				<td>Range of values expressed as percent of nominal.</td>
+			</tr>
+		    <tr>
+				<td colspan="3">The analytical data indicated that the mixing procedure 
+				<w:DERListBoxSC name="HA||MaterialsAndMethods>>ResultOfDoseAnalysis>>AdequateProcedure"><g:item>was</g:item><g:item>was not</g:item></w:DERListBoxSC>
+				adequate. 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">And that the variation between nominal and actual dosage to the animals
+				<w:DERListBoxSC name="HA||MaterialsAndMethods>>ResultOfDoseAnalysis>>AcceptableVariation"><g:item>was</g:item><g:item>was not</g:item></w:DERListBoxSC>
+				acceptable.
+				</td>
+			</tr>
+			<tr>
+				<td>Describe any deficiencies noted.</td>
+				<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>ResultOfDoseAnalysis>>Deficiencies>>Html" addStyleNames='smallRTA'/></td>				
+			</tr>
+		   <tr>
+				<td>Dosage Administration</td>
+				<td>
+					<w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>DosageAdministration>>Html">
+					    <p>Test formulations were administered to the animals daily via oral gavage (5 mL/kg bw)
+					        for 10 days.  TP was given via sc injection at 0.5 mL/kg bw, and flutamide was
+					        administered via oral gavage at 5 mL/kg bw.  Dose volumes were adjusted daily based
+					        on the concurrent body weight measurement.
+					    </p>
+					</w:DERRichTextAreaPUT>
+				</td>
+				<td>
+				    Summarize dose administration information regarding the test formulations, TP,
+				    and flutamide, including the route of administration, dose schedule, and dose volume.
+				    TP should have been administered by subcutaneous (s.c.) injection,
+				    and flutamide via oral gavage.  The test substance may be administered via oral gavage or s.c. injection.
+				    Animals should have been dosed for 10 consecutive days at approximately 24-hour intervals,				   
+				</td>
+		    </tr>
+		    <tr>
+			    <td colspan='3'>with the dose level adjusted daily based body weight. The dose volume for oral gavage administration should not exceed
+				    10 mL/kg body weight for aqueous solutions or 5 mL/kg for oil suspensions or solutions.
+				    For subcutaneous injection administration, doses should not exceed 0.5 mg/kg body weight.
+			    </td>
+			</tr>
+		    <tr>
+				<td>Statistics:</td>
+				<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>Statistics>>Html" /></td>
+				<td>
+				   	Describe the statistical methods used.  Include a statement as to whether or not the Reviewer
+				   	considers the analyses used to be appropriate; if inappropriate, provide alternative/rationale.
+				   	If inappropriate refer to the guideline for the correct statistical methods and perform
+				   	the required analysis.  Refer to SEP for details.  The criterion for statistical significance
+				   	should be identified (e.g., p &le; 0.05),			   	
+				</td>
+			</tr>
+			<tr>
+			    <td colspan='3'>and groups attaining statistical significance should be denoted. In the DER tables, the asterisk (*) is used as a means of indicating statistical significance.
+			        Summary data tables, reporting mean, standard deviation, and CV for each of the organ weights
+				   	should be included in the DER for each assay. Examples of these tables are included in the results section of this DER template.
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<div>
+			<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Growth>>Headnotes>>Html" addStyleNames='bigRTA' ui:field='t12head'>
+				<p style="color:FireBrick">
+					[Briefly summarize any effects on growth, as indicated by SVL and body weight at Day 7 and Day 21, respectively.
+					Report all concentrations at which effects were observed and the direction of the effect, e.g., apparent increase or decrease when compared to control.]
+				</p>
+			</w:DERRichTextAreaPUT>
+		</div>
+		<div style="font-weight:bold">
+			Table 12: Larval Growth in [test organism]. 
+		</div>
+		<tbl_ama:AMA2Table12/>
+		<div>
+			Abbreviations:
+							<sup>NA</sup> Not applicable.
+							<sup>ND</sup> Not determined.
+							<sup>SD</sup> Standard deviation.
+							<sup>1</sup> Also referred to as "wet weight" in the test guideline.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>Growth>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

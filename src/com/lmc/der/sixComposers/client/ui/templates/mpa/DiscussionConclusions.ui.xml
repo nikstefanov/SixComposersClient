@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<table>
+		<col style="width:15ex"/><col /><col style="width:43ex"/>
+			<tr>
+				<td>Investigator's conclusions</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}"/></td>
+				<td>Provide a brief paragraph of the investigator's conclusions.</td>
+			</tr>
+			<tr>
+				<td>Agency Comments</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" height="45ex"/></td>
+				<td>
+					<ul style="padding-left:0px;margin-left:2ex;">Briefly summarize the results and discuss the following:<!-- class="zeroDistance" -->
+						<li>Evaluate the adequacy of the dose levels tested.</li> 
+						<li>Discuss the systemic toxicity observed (i.e., survival, body weight, body weight gain, target organ toxicity etc).</li>
+						<li>Was age and weight at preputial separation within acceptable ranges? Report findings relative to performance criteria?</li>
+						<li>Were there any changes in organ weights compared to controls?  Report findings relative to performance criteria?</li>
+						<li>Were there any effects on hormone levels?</li>
+						<li>Were there any effects on clinical chemistry parameters?</li>
+						<li>Were there any changes in histopathological findings?</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Study Deficiencies</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}"/></td>
+				<td>List each deviation from the protocol and classify the deviation as major or
+				minor.  Also report any rationale provided by the investigator for the deviation.
+				Similarly list, classify, and discuss all other deficiencies with the conduct,
+				results, and reporting of the study.  Discuss the possibility of resolving
+				the deficiencies and what would be required.  Major deficiencies may be presented
+				and discussed in paragraph form, whereas minor deficiencies can be presented
+				in a bulleted list.</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

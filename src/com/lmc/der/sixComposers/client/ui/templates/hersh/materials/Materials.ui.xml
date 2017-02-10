@@ -1,0 +1,312 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="92ex">
+		<table>
+		 <col style="width:13ex"/><col/><col style="width:54ex"/>
+			<tr>
+				<td style="text-decoration:underline">Test Facility:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestFacility>>Name"/></td>
+				<td>Name of the Facility.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Location:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestFacility>>Location"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Study&nbsp;Director:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestFacility>>StudyDirector"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Other&nbsp;Personnel:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestFacility>>OtherPersonnel"/></td>
+				<td>Name and study responsibility.</td>
+			</tr>
+			<tr>
+			    <td style="text-indent:3ex">Study&nbsp;Period:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestFacility>>StudyPeriod"/></td>
+				<td>Study start and end dates.</td>
+			</tr><!-- 
+			<tr>
+				<td style="text-indent:3ex">Study&nbsp;Start&nbsp;Date:</td>
+				<td><w:DERTextBoxLength name=""/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Study&nbsp;End&nbsp;Date:</td>
+				<td><w:DERTextBoxLength name=""/></td>
+			</tr>-->
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Test Substance:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>CommonName"/></td>
+				<td>Common name as used by Agency.</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Description:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>Description"/></td>
+				<td>e.g. technical, nature, color, molecular weight, and relevant physicochemical properties</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Source:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>Source"/></td>
+				<td>Company (and catalog number if available).</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>LotBatch"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>LotBatchExp"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Purity:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>Purity"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Stability:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>Stability"/></td>
+				<td>How many days and under what conditions?</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">CAS&nbsp;#:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>CasNum"/></td>
+				<td>CAS # or Not available</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Structure:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestSubstance>>Structure>>Description"/></td>
+				<td>Insert Structure or state Not available</td>
+			</tr>
+		</table>
+		
+		<upl:UploadableImage xmlns:upl="urn:import:com.gwt.der.lib.client.upload.image"
+		sendFilenameTo="HA||MaterialsAndMethods>>TestSubstance>>Structure>>AttachedFileInside>>FileName"
+		/>
+	    <div>A previously uploaded file can be found in the "Attachments" tab, under the name "Structure file".
+			 Uploading a new file will discard a previously uploaded file.
+			 Only files with one of the following extentions will be rendered in the generated docx:
+			 .txt, .rtf, .htm, .html, .xht, .xhtml, .mht, .docx,
+			 .dotx, .docm, .dotm, .jpg, .gif, .tiff, .bmp, .png.
+			 Please, use only correct files, otherwise a corrupted docx will be produced. 
+		</div>					
+		<div>&nbsp;</div>
+			
+		<table>
+		 <col style="width:13ex"/><col/><col style="width:54ex"/>
+			<tr>			
+				<td style="text-decoration:underline">Reference Androgen:</td>
+				<td colspan='2'>Testosterone propionate (TP)</td>				
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Supplier:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAndrogen>>Supplier"/></td>
+				<td>Source/company (City, State [and Country, if outside U.S.A.])</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAndrogen>>LotBatch"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAndrogen>>LotBatchExp"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Purity:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAndrogen>>Purity"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">CAS&nbsp;#:</td>				
+				<td>57-82-5</td>
+			</tr>
+			<tr>			
+				<td style="text-decoration:underline">Reference Anti-androgen:</td>
+				<td colspan='2'>Flutamide (FT)</td>				
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Supplier:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAntiAndrogen>>Supplier"/></td>
+				<td>Source/company (City, State [and Country, if outside U.S.A.])</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAntiAndrogen>>LotBatch"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAntiAndrogen>>LotBatchExp"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Purity:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>ReferenceAntiAndrogen>>Purity"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">CAS&nbsp;#:</td>				
+				<td>13311-84-7</td>
+			</tr>			
+			<tr>			
+				<td style="text-decoration:underline">Solvent/Vehicle Control:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>SolventVehicleControl>>Name"/></td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td style="text-indent:3ex">Supplier:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>SolventVehicleControl>>Supplier"/></td>
+				<td>Source/company (City, State [and Country, if outside U.S.A.])</td>
+			</tr>
+			
+			<tr>
+				<td style="text-indent:3ex">Lot/Batch #:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>SolventVehicleControl>>LotBatch"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Expiration&nbsp;date:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>SolventVehicleControl>>LotBatchExp"/></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Rationale</div><div>(if not water):</div></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>SolventVehicleControl>>Rationale"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Final</div><div>concentration:</div></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>SolventVehicleControl>>FinalConcentration"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline">Test Animals:</td>								
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Species:</td>
+				<td>Rat</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Strain:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Strain">
+				    Sprague-Dawley or Wistar
+				</w:DERTextBoxLength></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Age at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[0]AgeWeight>>MinAge" visibleLength='2'/> - <w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[0]AgeWeight>>MaxAge" visibleLength='2'/></td>
+				<td>PND</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Weight at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[0]AgeWeight>>MinWeight" visibleLength='2'/> - <w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[0]AgeWeight>>MaxWeight" visibleLength='2'/></td>
+				<td>g (cholinesterase study)</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Age at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[1]AgeWeight>>MinAge" visibleLength='2'/> - <w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[1]AgeWeight>>MaxAge" visibleLength='2'/></td>
+				<td>PND</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Weight at dose</div><div>initiation:</div></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[1]AgeWeight>>MinWeight" visibleLength='2'/> - <w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>[1]AgeWeight>>MaxWeight" visibleLength='2'/></td>
+				<td>g (cholinesterase study)</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Source:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Source"/></td>
+				<td>Supplier(city, state and country, if outside U.S.)</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Housing:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Housing"/></td>
+				<td>##/cage, type of cage, and bedding, etc.
+					[e.g., 3/cage in stainless steel cages, suspended above cage board]
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div style="padding-left:3ex">
+					Group housing of two or three rats per cage is preferred.
+					If bedding material is used, it should contain a minimal amount of phytoestrogens.
+					</div> <!-- 
+					<div style="text-indent:3ex">(not cedar) as
+					bedding. Corn cob bedding is NOT recommended due to potential
+					to disrupt endocrine activity.
+					</div>  -->
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Diet:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Diet"/></td>
+				<td>Diet name, source, ad libitum</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Phytoestrogen</div>
+											<div>content:</div>
+				</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Phytoestrogen"/></td>
+				<td>&micro;g of genistein equivalents/gram diet</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex">Water:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Water"/></td>
+				<td>Source,treatment [e.g., Reverse-osmosis filtered tap water],ad libitum</td>
+			</tr>
+			<tr>
+				<!--<td colspan="2" style="text-indent:3ex">Environmental&nbsp;Conditions:</td>-->
+				<td style="text-indent:3ex;text-decoration:underline">
+				    <div>Environmental</div>
+					<div>Conditions:</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Temperature:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Temperature"/></td>
+				<td>&deg;C</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Humidity:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>Humidity"/></td>
+				<td>%</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Air changes:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>AirChanges"/></td>
+				<td>/hr</td>
+			</tr>
+			<tr>
+				<td style="text-indent:6ex">Photoperiod:</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>PhotoPeriodLight"/></td>
+				<td>hrs light</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>PhotoPeriodDark"/></td>
+				<td>hrs dark</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"><div>Acclimation</div>
+				    						<div>period:</div>
+				</td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>AcclimationPrior"/></td>
+				<td>days prior to castration</td>
+			</tr>
+			<tr>
+				<td style="text-indent:3ex"></td>
+				<td><w:DERTextBoxLength name="HA||MaterialsAndMethods>>TestAnimals>>AcclimationPost"/></td>
+				<td>days post-castration</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

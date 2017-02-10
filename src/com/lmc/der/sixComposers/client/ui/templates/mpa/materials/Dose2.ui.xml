@@ -1,0 +1,140 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	
+	<g:HTMLPanel width="110ex">
+		<table>
+			<col style="width:20ex"/><col /><col style="width:45ex"/>
+			<tr>
+				<td>Dose Selection Rationale</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}">
+					<p>	The dose levels were selected based on the results from a range-finding study
+						(MRID <span style="color:firebrick">[#]</span>) in which <span style="color:firebrick">[15]</span>
+						rats/sex/dose group were administered the test substance in corn oil via gavage at doses of 0, 500,
+						or 1000 mg/kg/day from PND <span style="color:firebrick">[23 53]</span>.
+						At 1000 mg/kg/day, body weights were significantly decreased by 15 18% (p&lt;0.05)
+						compared to controls beginning on PND 42, resulting in a decrease of 16% p&lt;0.05)
+						in terminal body weight.  Body weights at 500 mg/kg/day were comparable to controls
+						throughout the study.  There were no mortalities, clinical signs of toxicity,
+						or effects on BUN or creatinine at either dose.
+					</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+				<td>Briefly describe any range-finding study, including information regarding the study identification
+				(laboratory report or MRID number), study type (i.e., duration, route of administration,
+				species), dose levels, effects, and conclusions.  The guideline recommends that the highest
+				dose level be at or just below the Maximum Tolerated Dose (MTD) but need not exceed the Limit Dose
+				(1000 mg/kg/day).			
+				</td>
+			</tr> 
+			<tr>
+				<td colspan="3">However, typically, the Agency also considers the toxicity profile
+				of the chemical (i.e., cholinesterase inhibition, target organ toxicity, etc.) in dose selection.
+				The second dose level should typically be spaced to produce a lesser degree of toxicity relative
+				to the high dose unless justification is provided for testing at a different level.
+				</td>
+			</tr>
+			<tr>
+				<td>Dose Preparation and Analysis</td>
+				<td>
+					<w:DERRichTextAreaPUT name="{GDStr.getPath}">
+					<p>Dose formulations were prepared daily by mixing appropriate amounts of
+					test substance with <span style="color:firebrick">[vehicle]</span>.
+					Homogeneity and stability were tested at
+					<span style="color:firebrick;font-style:italic">(state when, what dose levels, duration, and temperature)</span>.
+					During the study, samples of dose formulations were analyzed
+					<span style="color:firebrick;font-style:italic">(state when and at what dose levels)</span>
+					for achieved concentration.
+					</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-decoration:underline" colspan="3">Results of Dose Analysis
+				</td>
+			</tr>
+			<tr>
+				<td>Homogeneity:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>Concentration range as percent of nominal and/or coefficient of variation for different strata (e.g., top, middle, and bottom).</td>
+			</tr>
+			<tr>
+				<td>Stability:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>Range of values for each temperature and duration tested, expressed as percent of initial (preferable) or percent of nominal concentration.</td>
+			</tr>
+			<tr>
+				<td>Concentration:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>
+				<td>Range of values expressed as percent of nominal.</td>
+			</tr>
+			<tr>
+				<td colspan="3">The analytical data indicated that the mixing procedure 
+				<w:DERListBoxSC name="{GDStr.getPath}">
+				    <g:item>was</g:item><g:item>was not</g:item>
+				</w:DERListBoxSC>
+				adequate. 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">And that the variation between nominal and actual dosage to the animals
+				<w:DERListBoxSC name="{GDStr.getPath}">
+				    <g:item>was</g:item><g:item>was not</g:item>
+				</w:DERListBoxSC>
+				acceptable.
+				</td>
+			</tr>
+			<tr>
+				<td>Describe any deficiencies noted.</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='smallRTA'/></td>				
+			</tr>
+			<tr>
+				<td>Dosage Administration</td>
+				<td>
+					<w:DERRichTextAreaPUT name="{GDStr.getPath}">
+					<p>All doses were administered once daily by gavage from PND 23 through PND 53,
+					    in a volume of <span style="color:firebrick">[#]</span> mL/kg of body weight.
+						Dosing was performed between <span style="color:firebrick">[0700] and [0900]</span> hours daily.
+					</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+				<td>Recommended range for dose volume is from 2.5 to 5.0 mL/kg of body weight.</td>
+			</tr>
+			<tr>
+				<td>Statistics:</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}" /></td>
+				<td>The following describes the statistical analyses recommended by the test
+					guideline and may be used by the reviewer for verification.
+					The DER should list parameters that were analyzed and the statistical methods
+					used and include a statement as to whether or not the Reviewer considers
+					the analyses to be appropriate. If inappropriate, provide alternative/rationale.</td>
+			</tr>
+			<tr>
+				<td colspan="3">The data should be analyzed for normal distribution and homogeneity of
+				    variance in order to satisfy the assumptions of Analysis of Variance (ANOVA)
+				    and Analysis of Covariance (ANCOVA)). It is recommended that all data
+				    (i.e., initial body weight [PND 23], body weight gain, age and body weight at preputial separation,
+				    terminal body weight, organ weights, and serum hormones be analyzed by ANOVA.
+				    If the study was conducted in blocks, then the recommended analysis is to use to a two-way
+				    ANOVA with Block and Treatment as main effects.  It is recommended age and body weight at
+				    preputial separation and all organ weights also be analyzed by ANCOVA,
+				    using the body weight at PND 23 as the covariate.  When statistically significant effects
+				    among groups are observed (p&lt;0.05), appropriate pair-wise comparison tests would be needed in
+				    order to identify which dose group is significantly different from the control group.
+				     Where there is heterogeneity of variance, data should be transformed appropriately to
+				     achieve homogeneous variances prior to ANOVA/ANCOVA, or analyzed using an appropriate
+				     nonparametric test.  However, non parametric analysis would generally be the method of last
+				     resort as it does not allow analysis of covariance.  In addition to ANOVA and ANCOVA,
+				     it is recommended that the unadjusted and adjusted values be examined for linear trend with dose level.
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

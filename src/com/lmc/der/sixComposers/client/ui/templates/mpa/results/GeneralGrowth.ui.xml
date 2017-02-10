@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_mpa="urn:import:com.lmc.der.sixComposers.client.widgets.tables.mpa"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	<ui:with field='GDStr' type='com.lmc.der.sixComposers.client.ui.PA_UI.GenderDependantStrings'/>
+	
+	<g:HTMLPanel>
+		<table>
+		<col style="width:15ex"/><col /><col style="width:40ex"/>
+			<tr>
+				<td>General Growth and Preputial Separation</td>
+				<td><w:DERRichTextAreaPUT name="{GDStr.getPath}"/></td>
+				<td>Body weights, body weight gains, age of attainment of PPS and weight
+				at day of PPS are presented in Table 3 below.
+				Table 4 provides the proportion/incidence of unseparated.
+				(These tables are MANDATORY.)</td>
+			</tr>
+		</table>
+		<div style="font-weight:bold">TABLE 3.  General Growth and Preputial Separation (PPS)<sup>a</sup></div>
+		<tbl_mpa:MPATable3/>
+		<table>
+		    <tr>
+		        <td>Footnotes:</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="{GDStr.getPath}" addStyleNames='tableCommentRTA'>
+		                <p style="font-size:smaller;"><sup>a</sup> Data were obtained from page <span style="color:firebrick">[#]</span>
+							of the study report, and are the average of <span style="color:firebrick">[#]</span>
+							male rats per dose group.<br/>
+						*	Significantly different from controls at p &lt; 0.05.<br/>
+						U = Unadjusted for body weight on PND 23. A = Adjusted for body weight on PND 23. SD = Standard Deviation
+							CV = Coefficient of Variation. NA = Not applicable.</p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		    </tr>
+		</table>						
+		<div style="font-weight:bold">TABLE 4.  Preputial Separation</div>
+		<tbl_mpa:MPATable4/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

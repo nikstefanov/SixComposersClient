@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_utero="urn:import:com.lmc.der.sixComposers.client.widgets.tables.utero"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel width="144ex">
+		<table>
+		<tr>
+			<td>Uterine Weights</td>
+			<td>
+				<w:DERRichTextAreaPUT name="UA||ResultsAndDiscussion>>UterineWeights>>Html">
+					
+				</w:DERRichTextAreaPUT>
+			</td>
+			<td>
+				Some form of the following table(s) is (are) mandatory. Insert comments here.
+			</td>
+		</tr>
+		</table>
+	
+		<div>&nbsp;</div>
+		<div style="text-align:center;font-weight:bold;">
+		    Table 8.  Uterine Weights from Estrogen Agonist Assay in 
+		    <w:DERTextBoxLength name="UA||ResultsAndDiscussion>>RatsTable8">[SD or Wistar]</w:DERTextBoxLength>
+		    Rats<sup>a</sup>
+		</div>
+		<tbl_utero:UteroTableParameters TblName='TBL8' addStyleNames='centeredObj'/>
+		<div style="text-align:center">Data were obtained from page 
+			<w:DERTextBoxLength name="UA||ResultsAndDiscussion>>RefTable8" visibleLength="2"/>
+		 	of the study report. N= No. of animals in the group.SD = Standard Deviation.BW = Body Weight.<br/>
+		 	* Significantly different from controls at p&lt;0.05. ** Significantly different from controls at p&lt;0.01.
+		</div>
+	    
+	    <div>&nbsp;</div>
+		<div style="text-align:center;font-weight:bold;">
+		     Table  9.  Uterine Weights from Anti-Estrogenic Assay in
+		     <w:DERTextBoxLength name="UA||ResultsAndDiscussion>>RatsTable9">[SD or Wistar]</w:DERTextBoxLength>
+		     Rats<sup>a</sup>
+		</div>
+		<tbl_utero:UteroTableParameters TblName='TBL9' addStyleNames='centeredObj'/>
+		<div style="text-align:center">Data were obtained from page 
+			<w:DERTextBoxLength name="UA||ResultsAndDiscussion>>RefTable9" visibleLength="2"/>
+		 	of the study report. N= No. of animals in the group.SD = Standard Deviation.BW = Body Weight.<br/>
+		 	* Significantly different from controls at p&lt;0.05. ** Significantly different from controls at p&lt;0.01.
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

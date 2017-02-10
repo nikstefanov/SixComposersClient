@@ -1,0 +1,56 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<div>
+			<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>ClinicalSigns>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='t15head'>
+				<p style="color:FireBrick">
+					[Discuss the incidence of behavioral effects or other clinical signs.
+					Identify when during the study the effects were observed and whether the effects are considered treatment-related.
+					Complete the table below, identifying each clinical sign observed on a separate row. Add rows as necessary.]
+				</p>
+			</w:DERRichTextAreaPUT>
+		</div>
+		<div style="font-weight:bold">
+			Table 15: Summary of Clinical Signs at Test Termination in [test organism].
+		</div>
+		<div>
+			<span>
+				<tbl_ama:AMA2Table15/>
+			</span>
+			<span>
+				<g:Button btnName="TYPE_ADD"/>
+			</span>
+			<span>
+				<g:Button btnName="TYPE_REM"/>
+			</span>
+		</div>
+		<div>
+			Abbreviations:<!-- 
+					<sup>NA</sup> Not applicable.
+					<sup>ND</sup> Not determined.
+					<sup>SD</sup> Standard deviation.-->
+					<sup>1</sup> Define any abbreviations used to identify clinical signs (i.e., sublethal effects, including behavioral effects) not specified elsewhere in the results.
+					Examples include abnormal swimming behavior, lethargy, loss of equilibrium, curvature of the spine (e.g., "bent tail"), other malformations, lesions, etc. Add rows as necessary.
+					Note that asynchronous development (unable to stage) is reported previously in <b>Table 10</b> and not here.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>ClinicalSigns>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

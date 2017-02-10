@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width='80ex'>
+		<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>FFS>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+					<p style="color:FireBrick">
+						[Briefly summarize any effects on fecundity and fertilization success. Report all concentrations at which effects
+						were observed and the direction of the effect, i.e., apparent increase or decrease when compared to control.]
+					</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 11: Fecundity and Fertilization Success in [test organism].
+		</div>
+		<tblfs:FSTRATable11/>
+		<div>
+			Abbreviations: NA Not applicable. ND Not determined.
+			<sup>1</sup> Fecundity is calculated as the number of eggs per surviving female per reproductive day per replicate.
+			<sup>2</sup> Fertilization success (%) is calculated as the number of embryos divided by the number of eggs, multiplied by 100.
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>FFS>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

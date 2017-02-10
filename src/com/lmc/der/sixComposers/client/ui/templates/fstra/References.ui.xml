@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"	
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<table>
+			<tr>
+							<td>
+								REFERENCES:
+							</td>
+							<td>
+								<w:DERRichTextAreaPUT name="FSTRA||References>>Html" addStyleNames='bigRTA' ui:field='rtaRef'>
+									<p style="color:FireBrick">
+										[Provide references that were cited in the study report, studies in the open literature,
+										references to other study reports in the submission or other studies conducted by the sponsor.
+										Do not include references to standard guidelines or methodologies.]
+									</p>
+								</w:DERRichTextAreaPUT>
+							</td>
+						</tr>
+					</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

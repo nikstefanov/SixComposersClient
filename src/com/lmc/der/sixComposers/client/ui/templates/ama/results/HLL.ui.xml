@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>HLL>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+						<p style="color:FireBrick">
+							[Briefly summarize developmental effects based on normalized hind limb length (HLL:SVL). Report all concentrations at which effects were
+							observed and the direction of the effect, e.g., apparent increase or decrease in normalized HLL when compared to control.]
+						</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 11: Larval Development in [test organism] - Hind Limb Length.
+		</div>
+		<tbl_ama:AMA2Table11/>
+		<div>
+			Abbreviations:
+							<sup>NA</sup> Not applicable.
+							<sup>SD</sup> Standard deviation.
+							<sup>1</sup> Report the treatment mean measurements (mm) for hind limb length (HLL). Then report the normalized value
+										(ratio of HLL:SVL) in the column following standard deviation (SD). The normalized value (HLL: SVL) reported
+										in the table should be the treatment mean of individual ratios of HLL to SVL.
+							<sup>2</sup> Summary results for snout-vent length (SVL) are presented in the next table
+										 (<span style="font-weight:bold">Table 12</span>).						
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||ResultsAndDiscussion>>HLL>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

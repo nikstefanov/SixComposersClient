@@ -1,0 +1,95 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_hersh="urn:import:com.lmc.der.sixComposers.client.widgets.tables.hersh"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width="121ex">
+	<table>
+		<col style="width:15ex"/><col/><col style="width:36ex"/>
+		<tr>
+			<td>In-Life Dates:</td>
+			<td style="text-align:center">Start:&nbsp;<w:DERTextBoxLength name="HA||MaterialsAndMethods>>[0]InLife>>InLifeStart" visibleLength='15'/>&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;End:&nbsp;<w:DERTextBoxLength name="HA||MaterialsAndMethods>>[0]InLife>>InLifeEnd" visibleLength='15'/>
+			</td>
+			<td>Month/Day/Year</td>
+		</tr>
+		<tr>
+		    <td></td>
+			<td style="text-align:center">Start:&nbsp;<w:DERTextBoxLength name="HA||MaterialsAndMethods>>[1]InLife>>InLifeStart" visibleLength='15'/>&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;End:&nbsp;<w:DERTextBoxLength name="HA||MaterialsAndMethods>>[1]InLife>>InLifeEnd" visibleLength='15'/>
+			</td>
+		</tr>
+		<tr>
+			<td>Study Design:</td>
+			<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>StudyDesign>>Html" addStyleNames='bigRTA'>
+			    <p>In a Hershberger Assay conducted to screen for the potential anti androgenic activity,
+			    the test substance was administered daily via <span style="color:firebrick">[oral gavage or s.c.]</span>
+			    to castrated male rats in conjunction with a daily dose of TP (<span style="color:firebrick">[#]</span> mg/kg/day)
+			    by sc injection. Anti androgenic activity is indicated by a statistically significant decrease
+			    in two or more target organ weights of the treated groups (test substance + TP) compared to
+			    the TP only control group.  Additionally, in a Hershberger Assay conducted to screen for potential androgenic activity,
+			    the test substance was administered daily via <span style="color:firebrick">[oral gavage or s.c.]</span>
+			    castrated male rats.  Positive androgenic activity is defined as a significant increase in two or
+			    more organ weights compared to the vehicle control.  For both assays, the animals were dosed for
+			    10 consecutive days and necropsied approximately 24 hours after the final dose administration
+			    for organ weight measurements.</p>
+			   </w:DERRichTextAreaPUT></td>
+			 <td>Summarize the study design, including information regarding whether the assay was
+			     testing for anti androgenic and androgenic activity, the purpose of each of the treatment groups,
+			     and the interpretation of the data. Note any deficiencies in the design and discuss the impact on
+			     interpretation and acceptability of the study in the study deficiency section at the end of the DER.
+			     <!-- Alter the text as necessary according to the purpose and methodology of the performing laboratory. -->
+			 </td>	    
+		</tr>
+		<tr>
+			<td>Study Schedule:</td>
+			<td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>StudySchedule>>Html" addStyleNames='bigRTA'>
+			    <p>Following the initial 7-day acclimation period, sexually mature male rats were castrated on
+			        PND 42 according to standard procedures and allowed 7 days for recovery and regression of
+			        accessory sex organ weights prior to initiation of dosing.  The dose administration period
+			        was from PND 49 through PND 60.  Rats were euthanized on PND 61approximately 24 hours after
+			        the last dose and necropsied for organ weight measurements.
+			   </p>
+			</w:DERRichTextAreaPUT></td>
+			<td>
+			    Summarize study schedule information regarding age of animals at castration,
+			    dosing initiation, and termination.  Note any concerns or deviations from the guideline that may
+			    impact the study.  Sprague Dawley and Wistar are the preferred strain of rat.  Refer to the SEP
+			    for guidance on other strains.
+			</td>
+		</tr>
+		<tr>
+		    <td>Animal Assignment:</td>
+		    <td><w:DERRichTextAreaPUT name="HA||MaterialsAndMethods>>AnimalAssignment>>Html" addStyleNames='bigRTA'>
+		        <p>Animals were assigned, stratified by body weight, to the test groups noted in Table 1.
+		            Statistical analysis indicated that there were no significant differences in
+		            group means at study initiation.  Furthermore, the body weight of each animal
+		            was within 20% of the overall mean.</p>
+		    </w:DERRichTextAreaPUT></td>
+		    <td>
+		        Describe procedures for animal assignment (including factors such as randomization,
+		        blocking by body weight, or day of assignment to allow for staggered necropsy).
+		        Note if animals were within acceptable criteria for weight variability at study initiation
+		        (i.e., no significant differences among group means and each individual
+		        within 20% of the overall mean body weight).
+		    </td>
+		</tr>		
+	</table>
+	<div>&nbsp;</div>
+	<div style="text-align:center;">
+	    <span style="font-weight:bold;">Table 1. Study Design<sup>a</sup></span>
+	</div>
+	<tbl_hersh:HershTable1 addStyleNames='centeredObj'/>
+	<div style="text-align:center;">
+		<sup>a</sup>Data were obtained from <w:DERTextBoxLength name="HA||MaterialsAndMethods>>RefTable1" visibleLength="4"/> page of the study report.
+	</div>
+	
+	</g:HTMLPanel>
+</ui:UiBinder>

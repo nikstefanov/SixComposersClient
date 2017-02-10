@@ -1,0 +1,77 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_hersh="urn:import:com.lmc.der.sixComposers.client.widgets.tables.hersh"
+	>
+	<ui:style>		
+	</ui:style>
+	
+	<g:HTMLPanel width='180ex'>
+		<table>
+		    <col width="15ex"/><col /><col style="width:50ex"/>
+		    <tr>
+		        <td>Organ weights</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="HA||ResultsAndDiscussion>>OrganWeights>>Html">		               
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		        <td>
+		            The following table(s) is (are) mandatory.
+		            The performance criteria table in the SEP
+		            is intended to be used as a worksheet for comparison to the observed results.
+		            Report relevant findings in the DER.
+		        </td>
+		    </tr>
+		</table>
+		
+		<div>&nbsp;</div>
+		<div style="text-align:center;font-weight:bold;">
+		    Table 10.  Accessory Sex Organ Weights from Androgen Agonist Assay in
+		    <w:DERTextBoxLength name="HA||ResultsAndDiscussion>>RatsTable10" visibleLength='21'>[Sprague-Dawley or Wistar]</w:DERTextBoxLength>
+		    Rats<sup>a</sup>
+		</div>
+		<tbl_hersh:HershTable8 tableNumber='TBL10' addStyleNames='centeredObj'/>			
+		<table>
+		    <tr>
+		        <td>Footnotes</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="HA||ResultsAndDiscussion>>FootTable10>>Html" addStyleNames='tableCommentRTA'>
+		                 <p style="font-size:smaller;"><sup>a</sup>Data were obtained from Tables <span style="color:firebrick">[#] - [#]</span>
+		                     on pages <span style="color:firebrick">[#] - [#]</span> of the study report.
+		                     Percent differences from controls were calculated by the reviewers and included in parentheses.
+		                     N = Number of animals in the group. SD = Standard Deviation. CV = Coefficient of Variation.<br/>
+		                     * Significantly different from controls at p&lt;0.05. ** Significantly different from controls at p&lt;0.01.
+		                 </p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		    </tr>
+		</table>
+		
+		<div>&nbsp;</div>
+		<div style="text-align:center;font-weight:bold;">
+		    Table 11. Accessory Sex Organ Weights from Anti-Androgen Agonist Assay in
+		    <w:DERTextBoxLength name="HA||ResultsAndDiscussion>>RatsTable11" visibleLength='21'>[Sprague-Dawley or Wistar]</w:DERTextBoxLength>
+		    Rats<sup>a</sup>
+		</div>
+		<tbl_hersh:HershTable9 tableNumber='TBL11' addStyleNames='centeredObj'/>
+		<table>
+		    <tr>
+		        <td>Footnotes</td>
+		        <td>
+		            <w:DERRichTextAreaPUT name="HA||ResultsAndDiscussion>>FootTable11>>Html" addStyleNames='tableCommentRTA'>
+		                 <p style="font-size:smaller;"><sup>a</sup>Data were obtained from Tables <span style="color:firebrick">[#] - [#]</span>
+		                     on pages <span style="color:firebrick">[#] - [#]</span> of the study report.
+		                     Percent differences from controls were calculated by the reviewers and included in parentheses.
+		                     N = Number of animals in the group. SD = Standard Deviation. CV = Coefficient of Variation.<br/>
+		                     * Significantly different from controls at p&lt;0.05. ** Significantly different from controls at p&lt;0.01.
+		                 </p>
+		            </w:DERRichTextAreaPUT>
+		        </td>
+		    </tr>
+		</table>
+		
+	</g:HTMLPanel>
+</ui:UiBinder>

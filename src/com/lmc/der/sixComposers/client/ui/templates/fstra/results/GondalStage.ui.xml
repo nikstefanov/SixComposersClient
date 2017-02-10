@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tblfs="urn:import:com.lmc.der.sixComposers.client.widgets.tables.fstra"
+	>
+	<ui:style>	
+		
+	</ui:style>
+	
+	<g:HTMLPanel width='90ex'>
+		<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>GondalStage>>Headnotes>>Html"  addStyleNames='bigRTA' ui:field='rtaResults'>						
+					<p style="color:FireBrick">
+						[Briefly summarize any effects on gonadal stage. Report all concentrations at which effects were observed and
+						the direction of the effect, i.e., apparent accelerated or inhibited development when compared to control.]
+					</p>
+		</w:DERRichTextAreaPUT>
+		<div style="font-weight:bold">
+			Table 14: Gonadal Staging in [test organism]. 
+		</div>
+		<tblfs:FSTRATable14/>
+		<div>
+			Abbreviations: J Juvenile. NA Not applicable. ND Not determined. UTS Unable to stage.<br/>           
+			<sup>1</sup>  The guideline recommends the following gonadal staging scale for male fathead minnow:
+						0=undeveloped, 1=early spermatogenic, 2=mid-spermatogenic, 3=late spermatogenic, 4=spent.<br/>
+			<sup>2</sup> The guideline recommends the following gonadal staging scale for female fathead minnow:
+						0=undeveloped, 1=early development, 2=mid-development, 3=late development, 4=late development/hydrated, 5=post-ovulatory. 
+		</div>
+		<table>
+			<tr>
+				<td>
+					Table Comments:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="FSTRA||ResultsAndDiscussion>>GondalStage>>Comments>>Html" addStyleNames='tableCommentRTA'/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

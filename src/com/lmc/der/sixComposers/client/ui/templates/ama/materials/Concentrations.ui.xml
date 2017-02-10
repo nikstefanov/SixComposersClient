@@ -1,0 +1,78 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:com.lmc.der.sixComposers.client.widgets"
+	xmlns:tbl="urn:import:com.lmc.der.sixComposers.client.widgets.tables"
+	xmlns:tbl_ama="urn:import:com.lmc.der.sixComposers.client.widgets.tables.ama"
+	>
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel width="170ex">
+		<div style="font-weight:bold">
+			Table 8: Summary of Test Concentrations in the Amphibian Metamorphosis Assay with [test chemical].
+		</div>
+		<table>
+		<col style="width:80%"/><col style="width:20%"/>
+		<tr>
+		<td>
+			<tbl_ama:AMA2Table8/>
+		</td>
+		<td style="font-style:italic">
+			Guideline Recommendations:
+			EPA and OECD recommend that test item concentrations be
+			maintained at a coefficient of variation (CV) &le;20%. 
+		</td>
+		</tr></table>
+		<table>
+		<tr>
+			<td>
+				<g:Button btnName='TBL8_ADD'>
+					Add Test concentration					
+				</g:Button>
+			</td>
+			<td>
+				<g:Button btnName='TBL8_REM'>
+					Remove Test concentration
+				</g:Button>
+			</td>
+			<td>
+				Abbreviations: 						
+				<sup>CV</sup> Coefficient of variation.
+			</td>						 
+		</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					E. Observations
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Biological Endpoints:
+				</td>
+				<td>
+					<w:DERRichTextAreaPUT name="AMA||MaterialsAndMethods>>Observations>>BiologicalEndpoints>>Html"  addStyleNames='bigRTA' ui:field='rtaBE'>
+						<p style="color:firebrick">
+								[List the parameters measured, including the specific clinical signs/sublethal effects that were considered.  Include the measurement interval for each observation (e.g., daily, day 7 and 21, day 21, other).]
+						</p>
+					</w:DERRichTextAreaPUT>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Were raw (individual) data provided?  
+				</td>
+				<td>
+					<w:DERListBoxYesNo name="AMA||MaterialsAndMethods>>Observations>>IndividualDataProvided" ui:field='lbRD'/>
+				</td>
+			</tr>
+			<tr style="font-style:italic">
+				<td colspan="2">
+				EPA recommends that observations of mortality and clinical signs occur daily, at a minimum; other observations are recommended as follows: NF developmental stage (days 7 and 21); any asynchronous development, indicated by tadpoles that cannot be assigned an NF stage (days 7 and 21); hind limb length (days 7 and 21); snout-vent length (days 7 and 21);  body weight (test initiation, for optional size-based larval selection); and thyroid gland gross pathology and histopathology (day 21).  Note the histopathology section of the test guideline also includes thyroid gross pathology observations.
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 
